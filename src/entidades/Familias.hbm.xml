@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-ene-2013 12:35:51 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="entidades.Familias" table="familias" catalog="bdmoises">
+        <id name="idfamilias" type="int">
+            <column name="IDFamilias" />
+            <generator class="assigned" />
+        </id>
+        <property name="codigo" type="string">
+            <column name="Codigo" length="10" unique="true" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="Descripcion" length="20" />
+        </property>
+        <property name="usuarioMod" type="string">
+            <column name="UsuarioMod" length="10" />
+        </property>
+        <property name="fechaMod" type="date">
+            <column name="FechaMod" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

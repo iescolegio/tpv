@@ -5,6 +5,7 @@
 package BaseDatos;
 
 import entidades.Contadores;
+import entidades.Familias;
 import java.util.Iterator;
 import java.util.List;
 //import java.util.HashSet;
@@ -112,6 +113,25 @@ public class Operacion {
         
     }
    
+   public Familias ObtenerIdFamiliaPorCodigo(String Codigo){
+        Session s= utilidades.HibernateUtil.getSessionFactory().getCurrentSession();
+        s.beginTransaction();
+        Query query = s.createQuery("from Familias where Codigo = :Codigo ");
+        query.setParameter("Codigo", Codigo);
+                 
+        Iterator iter = query.iterate();
+        Familias familia;//=new Familias();
+      
+        while (iter.hasNext()){
+           familia = (entidades.Familias) iter.next();  // fetch the object
+           return familia; 
+        }
+        
+        s.getTransaction().commit();
+        return null;
+      
+        
+    }
 
   
   

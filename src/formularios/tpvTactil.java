@@ -27,7 +27,7 @@ public class tpvTactil extends javax.swing.JFrame {
         BorrarTextoBotones(jPanel1);
         BorrarTextoBotones(jPanel2);
        Ultima= CargarFamilias(Ultima);
-       CargarArticulos(0);
+      
     }
 
     /**
@@ -80,7 +80,7 @@ public class tpvTactil extends javax.swing.JFrame {
         jButton29 = new javax.swing.JButton();
         jButton26 = new javax.swing.JButton();
         jButton27 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        txtDisplay = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,36 +91,66 @@ public class tpvTactil extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton1.setText("jButton1");
         jButton1.setName("familia1"); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton1);
 
         jButton2.setBackground(new java.awt.Color(153, 204, 255));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton2.setText("jButton2");
         jButton2.setName("familia2"); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton2);
 
         jButton4.setBackground(new java.awt.Color(153, 204, 255));
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton4.setText("jButton4");
         jButton4.setName("familia4"); // NOI18N
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton4);
 
         jButton5.setBackground(new java.awt.Color(153, 204, 255));
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton5.setText("jButton5");
         jButton5.setName("familia5"); // NOI18N
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton5);
 
         jButton3.setBackground(new java.awt.Color(153, 204, 255));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton3.setText("jButton3");
         jButton3.setName("familia3"); // NOI18N
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton3);
 
         jButton6.setBackground(new java.awt.Color(153, 204, 255));
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton6.setText("jButton6");
         jButton6.setName("familia6"); // NOI18N
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton6);
 
         jPanel2.setBackground(new java.awt.Color(255, 204, 204));
@@ -288,9 +318,9 @@ public class tpvTactil extends javax.swing.JFrame {
         jButton27.setText("Del");
         jPanel4.add(jButton27);
 
-        jTextField1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField1.setText("1");
+        txtDisplay.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        txtDisplay.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txtDisplay.setText("1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -312,7 +342,7 @@ public class tpvTactil extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField1))))
+                            .addComponent(txtDisplay))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(25, 25, 25))
@@ -326,7 +356,7 @@ public class tpvTactil extends javax.swing.JFrame {
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -358,13 +388,80 @@ public class tpvTactil extends javax.swing.JFrame {
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton24ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+         BorrarTextoBotones(jPanel2);
+         BaseDatos.Operacion Operaciones= new BaseDatos.Operacion(); 
+          Familias F;
+          F=Operaciones.ObtenerIdFamiliaPorCodigo(jButton2.getText());
+           CargarArticulos(0,String.valueOf(F.getIdfamilias()));
+        // txtDisplay.setText(String.valueOf(F.getIdfamilias()));
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+         BorrarTextoBotones(jPanel2);
+              BaseDatos.Operacion Operaciones= new BaseDatos.Operacion(); 
+              Familias F;
+              F=Operaciones.ObtenerIdFamiliaPorCodigo(jButton1.getText());
+             
+             CargarArticulos(0,String.valueOf(F.getIdfamilias()));
+              
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+         BorrarTextoBotones(jPanel2);
+        BaseDatos.Operacion Operaciones= new BaseDatos.Operacion(); 
+              Familias F;
+              F=Operaciones.ObtenerIdFamiliaPorCodigo(jButton4.getText());
+             
+             CargarArticulos(0,String.valueOf(F.getIdfamilias()));
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+         BorrarTextoBotones(jPanel2);
+        BaseDatos.Operacion Operaciones= new BaseDatos.Operacion(); 
+              Familias F;
+              F=Operaciones.ObtenerIdFamiliaPorCodigo(jButton5.getText());
+             
+             CargarArticulos(0,String.valueOf(F.getIdfamilias()));
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+         BorrarTextoBotones(jPanel2);
+        BaseDatos.Operacion Operaciones= new BaseDatos.Operacion(); 
+              Familias F;
+              F=Operaciones.ObtenerIdFamiliaPorCodigo(jButton3.getText());
+             
+             CargarArticulos(0,String.valueOf(F.getIdfamilias()));
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here
+         BorrarTextoBotones(jPanel2);
+        BaseDatos.Operacion Operaciones= new BaseDatos.Operacion(); 
+              Familias F;
+              F=Operaciones.ObtenerIdFamiliaPorCodigo(jButton6.getText());
+             
+             CargarArticulos(0,String.valueOf(F.getIdfamilias()));
+    }//GEN-LAST:event_jButton6ActionPerformed
  
- int CargarArticulos(int PosInicial){
+ int CargarArticulos(int PosInicial,String IdFamilia){
     int IndiceBotones=0;
     int i;
     Component[] componentes =jPanel2.getComponents();
     BaseDatos.Operacion Operaciones= new BaseDatos.Operacion(); 
-    List ListaArticulos= Operaciones.ObtenerArticulos();
+    List ListaArticulos;
+   
+    ListaArticulos= Operaciones.ObtenerArticulosFamilia(IdFamilia);
+   
+        
+    
     if (PosInicial==ListaArticulos.size()) PosInicial=0;
    
       for  ( i=PosInicial;i<ListaArticulos.size();i++){
@@ -503,6 +600,6 @@ public class tpvTactil extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField txtDisplay;
     // End of variables declaration//GEN-END:variables
 }

@@ -109,7 +109,7 @@ public class tpvTactil extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 204, 204));
         jPanel2.setLayout(new java.awt.GridLayout(3, 6));
 
-        jButton7.setText("jButton7");
+        jButton7.setText("jButton7oohjo");
         jPanel2.add(jButton7);
 
         jButton11.setText("jButton11");

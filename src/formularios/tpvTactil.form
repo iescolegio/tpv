@@ -163,7 +163,7 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="jButton7">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton7"/>
+            <Property name="text" type="java.lang.String" value="jButton7oohjo"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton11">

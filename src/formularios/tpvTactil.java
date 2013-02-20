@@ -4,10 +4,12 @@
  */
 package formularios;
 
+import entidades.Articulos;
 import entidades.Familias;
 import java.awt.Component;
 import java.util.List;
 import javax.swing.JButton;
+import javax.swing.JPanel;
 
 /**
  *
@@ -22,8 +24,10 @@ public class tpvTactil extends javax.swing.JFrame {
     public tpvTactil() {
         initComponents();
         setLocationRelativeTo(null);
-        BorrarTextoBotones();
+        BorrarTextoBotones(jPanel1);
+        BorrarTextoBotones(jPanel2);
        Ultima= CargarFamilias(Ultima);
+       CargarArticulos(0);
     }
 
     /**
@@ -42,7 +46,6 @@ public class tpvTactil extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jButton7 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
@@ -56,11 +59,33 @@ public class tpvTactil extends javax.swing.JFrame {
         jButton16 = new javax.swing.JButton();
         jButton18 = new javax.swing.JButton();
         jButton19 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jButton13 = new javax.swing.JButton();
+        jButton21 = new javax.swing.JButton();
+        jButton22 = new javax.swing.JButton();
+        jButton23 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jPanel4 = new javax.swing.JPanel();
+        jButton24 = new javax.swing.JButton();
+        jButton28 = new javax.swing.JButton();
+        jButton32 = new javax.swing.JButton();
+        jButton30 = new javax.swing.JButton();
+        jButton25 = new javax.swing.JButton();
+        jButton31 = new javax.swing.JButton();
+        jButton35 = new javax.swing.JButton();
+        jButton34 = new javax.swing.JButton();
+        jButton33 = new javax.swing.JButton();
+        jButton29 = new javax.swing.JButton();
+        jButton26 = new javax.swing.JButton();
+        jButton27 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(51, 153, 255));
-        jPanel1.setLayout(new java.awt.GridLayout(3, 2));
+        jPanel1.setLayout(new java.awt.GridLayout(3, 2, 2, 2));
 
         jButton1.setBackground(new java.awt.Color(153, 204, 255));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -98,6 +123,69 @@ public class tpvTactil extends javax.swing.JFrame {
         jButton6.setName("familia6"); // NOI18N
         jPanel1.add(jButton6);
 
+        jPanel2.setBackground(new java.awt.Color(255, 204, 204));
+        jPanel2.setLayout(new java.awt.GridLayout(3, 6, 2, 2));
+
+        jButton7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton7.setText("jButton7oohjo");
+        jButton7.setName("articulos1"); // NOI18N
+        jPanel2.add(jButton7);
+
+        jButton11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton11.setText("jButton11");
+        jButton11.setName("articulos2"); // NOI18N
+        jPanel2.add(jButton11);
+
+        jButton14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton14.setText("jButton14");
+        jButton14.setName("articulos3"); // NOI18N
+        jPanel2.add(jButton14);
+
+        jButton9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton9.setText("jButton9");
+        jButton9.setName("articulos4"); // NOI18N
+        jPanel2.add(jButton9);
+
+        jButton10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton10.setText("jButton10");
+        jButton10.setName("articulos5"); // NOI18N
+        jPanel2.add(jButton10);
+
+        jButton15.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton15.setText("jButton15");
+        jButton15.setName("articulos6"); // NOI18N
+        jPanel2.add(jButton15);
+
+        jButton17.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton17.setText("jButton17");
+        jButton17.setName("articulos7"); // NOI18N
+        jPanel2.add(jButton17);
+
+        jButton12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton12.setText("jButton12");
+        jButton12.setName("articulos8"); // NOI18N
+        jPanel2.add(jButton12);
+
+        jButton20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton20.setText("jButton20");
+        jButton20.setName("articulos9"); // NOI18N
+        jPanel2.add(jButton20);
+
+        jButton16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton16.setText("jButton16");
+        jButton16.setName("articulos10"); // NOI18N
+        jPanel2.add(jButton16);
+
+        jButton18.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton18.setText("jButton18");
+        jButton18.setName("articulos11"); // NOI18N
+        jPanel2.add(jButton18);
+
+        jButton19.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton19.setText("jButton19");
+        jButton19.setName("articulos12"); // NOI18N
+        jPanel2.add(jButton19);
+
         jButton8.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton8.setText(">>");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -106,44 +194,103 @@ public class tpvTactil extends javax.swing.JFrame {
             }
         });
 
-        jPanel2.setBackground(new java.awt.Color(255, 204, 204));
-        jPanel2.setLayout(new java.awt.GridLayout(3, 6));
+        jPanel3.setBackground(new java.awt.Color(255, 255, 153));
+        jPanel3.setLayout(new java.awt.GridLayout(8, 1));
 
-        jButton7.setText("jButton7oohjo");
-        jPanel2.add(jButton7);
+        jButton13.setText("Salir");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton13);
 
-        jButton11.setText("jButton11");
-        jPanel2.add(jButton11);
+        jButton21.setText("jButton21");
+        jPanel3.add(jButton21);
 
-        jButton14.setText("jButton14");
-        jPanel2.add(jButton14);
+        jButton22.setText("jButton22");
+        jPanel3.add(jButton22);
 
-        jButton9.setText("jButton9");
-        jPanel2.add(jButton9);
+        jButton23.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButton23.setText(">>");
 
-        jButton10.setText("jButton10");
-        jPanel2.add(jButton10);
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null}
+            },
+            new String [] {
+                "Cantidad", "Descripción", "Importe"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
 
-        jButton15.setText("jButton15");
-        jPanel2.add(jButton15);
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
 
-        jButton17.setText("jButton17");
-        jPanel2.add(jButton17);
+        jPanel4.setBackground(new java.awt.Color(102, 255, 102));
+        jPanel4.setLayout(new java.awt.GridLayout(4, 3, 2, 2));
 
-        jButton12.setText("jButton12");
-        jPanel2.add(jButton12);
+        jButton24.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton24.setText("1");
+        jButton24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton24ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jButton24);
 
-        jButton20.setText("jButton20");
-        jPanel2.add(jButton20);
+        jButton28.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton28.setText("2");
+        jPanel4.add(jButton28);
 
-        jButton16.setText("jButton16");
-        jPanel2.add(jButton16);
+        jButton32.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton32.setText("3");
+        jPanel4.add(jButton32);
 
-        jButton18.setText("jButton18");
-        jPanel2.add(jButton18);
+        jButton30.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton30.setText("4");
+        jPanel4.add(jButton30);
 
-        jButton19.setText("jButton19");
-        jPanel2.add(jButton19);
+        jButton25.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton25.setText("5");
+        jPanel4.add(jButton25);
+
+        jButton31.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton31.setText("6");
+        jPanel4.add(jButton31);
+
+        jButton35.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton35.setText("7");
+        jPanel4.add(jButton35);
+
+        jButton34.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton34.setText("8");
+        jPanel4.add(jButton34);
+
+        jButton33.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton33.setText("9");
+        jPanel4.add(jButton33);
+
+        jButton29.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton29.setText("0");
+        jPanel4.add(jButton29);
+
+        jButton26.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton26.setText(".");
+        jPanel4.add(jButton26);
+
+        jButton27.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton27.setText("Del");
+        jPanel4.add(jButton27);
+
+        jTextField1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jTextField1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextField1.setText("1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -152,22 +299,45 @@ public class tpvTactil extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE)
+                            .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 463, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jTextField1))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 559, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(25, 25, 25))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(163, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
 
@@ -176,10 +346,42 @@ public class tpvTactil extends javax.swing.JFrame {
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
-        BorrarTextoBotones();
+        BorrarTextoBotones(jPanel1);
        Ultima= CargarFamilias(Ultima);
     }//GEN-LAST:event_jButton8ActionPerformed
- int CargarFamilias(int PosInicial){
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton24ActionPerformed
+ 
+ int CargarArticulos(int PosInicial){
+    int IndiceBotones=0;
+    int i;
+    Component[] componentes =jPanel2.getComponents();
+    BaseDatos.Operacion Operaciones= new BaseDatos.Operacion(); 
+    List ListaArticulos= Operaciones.ObtenerArticulos();
+    if (PosInicial==ListaArticulos.size()) PosInicial=0;
+   
+      for  ( i=PosInicial;i<ListaArticulos.size();i++){
+         Articulos articulo=  (Articulos) ListaArticulos.get(i);
+         JButton Boton;
+         Boton= BotonPorNombre ("articulos"+(IndiceBotones+1),jPanel2);
+         Boton.setText(articulo.getCodigo());
+         Boton.setEnabled(true);
+         if (IndiceBotones==11){
+              return i+1;
+          }
+          IndiceBotones++;
+      }
+      return i;
+} 
+    
+    int CargarFamilias(int PosInicial){
     int IndiceBotones=0;
     int i;
     Component[] componentes =jPanel1.getComponents();
@@ -190,7 +392,7 @@ public class tpvTactil extends javax.swing.JFrame {
       for  ( i=PosInicial;i<ListaFamilias.size();i++){
          Familias familias=  (Familias) ListaFamilias.get(i);
          JButton Boton;
-         Boton= BotonPorNombre ("familia"+(IndiceBotones+1));
+         Boton= BotonPorNombre ("familia"+(IndiceBotones+1),jPanel1);
          Boton.setText(familias.getCodigo());
          Boton.setEnabled(true);
          if (IndiceBotones==5){
@@ -201,8 +403,8 @@ public class tpvTactil extends javax.swing.JFrame {
       return i;
 } 
     
-  void BorrarTextoBotones(){
-      Component[] componentes =jPanel1.getComponents();
+  void BorrarTextoBotones(JPanel Panel){
+      Component[] componentes =Panel.getComponents();
         for(int i=0; i<componentes.length;i++) {
             if(componentes[i] instanceof JButton){
                 JButton Boton=(JButton)componentes[i];
@@ -211,8 +413,8 @@ public class tpvTactil extends javax.swing.JFrame {
             }
         }   
     }
-     JButton BotonPorNombre(String Nombre){
-      Component[] componentes =jPanel1.getComponents();
+     JButton BotonPorNombre(String Nombre,JPanel Panel){
+      Component[] componentes =Panel.getComponents();
         for(int i=0; i<componentes.length;i++) {
             if(componentes[i] instanceof JButton)  {
                 JButton Boton=(JButton)componentes[i];
@@ -223,6 +425,8 @@ public class tpvTactil extends javax.swing.JFrame {
         }   
         return null;
     } 
+     
+    
     /**
      * @param args the command line arguments
      */
@@ -262,6 +466,7 @@ public class tpvTactil extends javax.swing.JFrame {
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
@@ -270,7 +475,22 @@ public class tpvTactil extends javax.swing.JFrame {
     private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
+    private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton22;
+    private javax.swing.JButton jButton23;
+    private javax.swing.JButton jButton24;
+    private javax.swing.JButton jButton25;
+    private javax.swing.JButton jButton26;
+    private javax.swing.JButton jButton27;
+    private javax.swing.JButton jButton28;
+    private javax.swing.JButton jButton29;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton30;
+    private javax.swing.JButton jButton31;
+    private javax.swing.JButton jButton32;
+    private javax.swing.JButton jButton33;
+    private javax.swing.JButton jButton34;
+    private javax.swing.JButton jButton35;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
@@ -279,5 +499,10 @@ public class tpvTactil extends javax.swing.JFrame {
     private javax.swing.JButton jButton9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

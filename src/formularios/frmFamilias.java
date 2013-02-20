@@ -44,6 +44,7 @@ public class frmFamilias extends javax.swing.JFrame {
         jPopupMenu1 = new javax.swing.JPopupMenu();
         mnuEditar = new javax.swing.JMenuItem();
         mnuEliminar = new javax.swing.JMenuItem();
+        mnuAddArticulos = new javax.swing.JMenuItem();
         txtCodigo = new javax.swing.JTextField();
         txtDescripcion = new javax.swing.JTextField();
         cmdNuevo = new javax.swing.JButton();
@@ -74,8 +75,15 @@ public class frmFamilias extends javax.swing.JFrame {
         });
         jPopupMenu1.add(mnuEliminar);
 
+        mnuAddArticulos.setText("Añadir Articulos");
+        mnuAddArticulos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuAddArticulosActionPerformed(evt);
+            }
+        });
+        jPopupMenu1.add(mnuAddArticulos);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setAlwaysOnTop(true);
         setResizable(false);
 
         cmdNuevo.setIcon(new javax.swing.ImageIcon("D:\\descargas\\1359557344_asterisk_yellow.png")); // NOI18N
@@ -316,6 +324,7 @@ public class frmFamilias extends javax.swing.JFrame {
               if (Res== JOptionPane.YES_OPTION){
                       accion="borrar";
                       Operaciones.BorrarFamilia(Id_Actualizar);
+                      Operaciones.BorrarArticulosFamilia(Id_Actualizar);
                       CargarFamilias();   
                       txtCodigo.setText("");
                       txtDescripcion.setText("");
@@ -347,9 +356,11 @@ public class frmFamilias extends javax.swing.JFrame {
                       accion="borrar";
                       modelo= (DefaultTableModel) this.tblfamilias.getModel();
                       String SID=(String)modelo.getValueAt(filaSele, 0);
+                     
                       ID =Integer.parseInt (SID);
 
                       Operaciones.BorrarFamilia(ID);
+                      Operaciones.BorrarArticulosFamilia(ID);
                       CargarFamilias();   
                       txtCodigo.setText("");
                       txtDescripcion.setText("");
@@ -365,6 +376,43 @@ public class frmFamilias extends javax.swing.JFrame {
          
          
     }//GEN-LAST:event_mnuEliminarActionPerformed
+
+    private void mnuAddArticulosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuAddArticulosActionPerformed
+        // TODO add your handling code here:
+              
+         int filaSele;  Integer ID;
+        
+         try{
+           filaSele=this.tblfamilias.getSelectedRow(); 
+           if (filaSele==-1){
+               JOptionPane.showMessageDialog(this, "Seleccione una fila ", "Grid", 
+                       JOptionPane.INFORMATION_MESSAGE);
+           }
+           else{
+             
+              modelo= (DefaultTableModel) this.tblfamilias.getModel();
+              String SID=(String)modelo.getValueAt(filaSele, 0);
+              String Familia=(String)modelo.getValueAt(filaSele, 2);
+              ID =Integer.parseInt (SID);
+              frmArticulos f= new frmArticulos(ID,Familia);
+             f.setVisible(true);    
+         }
+        }
+          catch (Exception e){
+            JOptionPane.showMessageDialog(this,  e, "Borrar", JOptionPane.INFORMATION_MESSAGE);   
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+       
+         
+
+    }//GEN-LAST:event_mnuAddArticulosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -412,6 +460,7 @@ public class frmFamilias extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JMenuItem mnuAddArticulos;
     private javax.swing.JMenuItem mnuEditar;
     private javax.swing.JMenuItem mnuEliminar;
     private javax.swing.JTable tblfamilias;

@@ -4,6 +4,14 @@
  */
 package formularios;
 
+import entidades.Articulos;
+
+import java.util.Iterator;
+import java.util.List;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author mgacosta
@@ -13,9 +21,21 @@ public class frmArticulos extends javax.swing.JFrame {
     /**
      * Creates new form frmArticulos
      */
+    String accion="Nuevo";
+    int Id_Actualizar;
+    int IdFamilia;
+    private DefaultTableModel modelo;
+    
+    
     public frmArticulos() {
         initComponents();
+    }
+    public frmArticulos(int IdFamilia,String Familia) {
+        initComponents();
+        this.IdFamilia=IdFamilia;
+        jLabel3.setText("Articulos (" + Familia+")");
         setLocationRelativeTo(null);
+        CargarArticulos();
     }
 
     /**
@@ -27,6 +47,9 @@ public class frmArticulos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPopupMenu1 = new javax.swing.JPopupMenu();
+        mnuEditar = new javax.swing.JMenuItem();
+        mnuBorrar = new javax.swing.JMenuItem();
         txtDescripcion = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -34,14 +57,28 @@ public class frmArticulos extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblfamilias = new javax.swing.JTable();
+        tblArticulos = new javax.swing.JTable();
         txtCodigo = new javax.swing.JTextField();
         cmdEliminar = new javax.swing.JButton();
         cmdSalir = new javax.swing.JButton();
         cmdNuevo = new javax.swing.JButton();
         cmdGuardar = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        txtPrecio = new javax.swing.JTextField();
+
+        mnuEditar.setText("Editar");
+        mnuEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuEditarActionPerformed(evt);
+            }
+        });
+        jPopupMenu1.add(mnuEditar);
+
+        mnuBorrar.setText("Borrar");
+        jPopupMenu1.add(mnuBorrar);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -79,7 +116,7 @@ public class frmArticulos extends javax.swing.JFrame {
 
         jLabel2.setText("Descripcion");
 
-        tblfamilias.setModel(new javax.swing.table.DefaultTableModel(
+        tblArticulos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
                 {},
@@ -90,7 +127,9 @@ public class frmArticulos extends javax.swing.JFrame {
 
             }
         ));
-        jScrollPane1.setViewportView(tblfamilias);
+        tblArticulos.setColumnSelectionAllowed(true);
+        tblArticulos.setComponentPopupMenu(jPopupMenu1);
+        jScrollPane1.setViewportView(tblArticulos);
 
         cmdEliminar.setIcon(new javax.swing.ImageIcon("D:\\descargas\\1359557381_DeleteRed.png")); // NOI18N
         cmdEliminar.setText("Eliminar");
@@ -125,6 +164,8 @@ public class frmArticulos extends javax.swing.JFrame {
             }
         });
 
+        jLabel5.setText("Precio");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -141,8 +182,13 @@ public class frmArticulos extends javax.swing.JFrame {
                                     .addComponent(jLabel1))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txtDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel5)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(txtPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -161,9 +207,13 @@ public class frmArticulos extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(17, 17, 17)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel5))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel1)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -182,31 +232,72 @@ public class frmArticulos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
+     void CargarArticulos(){
+   
+    String[] titulos = {"ID","Codigo","Descripcion","Precio"};
+    String[] registro = new String[4];
+    modelo= new DefaultTableModel(null,titulos);
+    
+    BaseDatos.Operacion Operaciones= new BaseDatos.Operacion(); 
+    List LisataArticulos= Operaciones.ObtenerArticulosFamilia(String.valueOf(IdFamilia));
+   
+    Iterator iter = LisataArticulos.iterator();
+    while (iter.hasNext())
+    {
+      Articulos articulos = (Articulos) iter.next();    
+      registro[0]=String.valueOf(articulos.getIdarticulos());
+      registro[1]=articulos.getCodigo();
+      registro[2]=articulos.getDescripcion();
+      registro[3]=articulos.getPrecio().toString();
+      modelo.addRow(registro);
+    }
+    tblArticulos.setModel(modelo);
+}  
+    
+     
+    void BuscarArticulosID(String vID){
+  
+  BaseDatos.Operacion Operaciones= new BaseDatos.Operacion(); 
+    List ListaArticulos= Operaciones.ObtenerArticulosID(vID);
+   
+    Iterator iter = ListaArticulos.iterator();
+    while (iter.hasNext())
+    {
+      Articulos articulos = (Articulos) iter.next(); 
+      txtCodigo.setText(articulos.getCodigo());
+      txtDescripcion.setText(articulos.getDescripcion());
+      txtPrecio.setText(articulos.getPrecio().toString());
+      Id_Actualizar=articulos.getIdarticulos();
+     // Id_Actualizar=articulos.getIdfamilias();
+    }
+       
+  
+} 
+    
     private void cmdEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdEliminarActionPerformed
         // TODO add your handling code here:
 
-//        BaseDatos.Operacion Operaciones= new BaseDatos.Operacion();
-//        try{
-//
-//            
-//         
-//            
-//            
-//            int Res= JOptionPane.showConfirmDialog(new JFrame(),"Eliminar la familia ?",
-//                "Eliminar",JOptionPane.YES_NO_OPTION) ;
-//            if (Res== JOptionPane.YES_OPTION){
-//                accion="borrar";
-//                Operaciones.BorrarFamilia(Id_Actualizar);
-//                CargarFamilias();
-//                txtCodigo.setText("");
-//                txtDescripcion.setText("");
-//                Id_Actualizar=-1;
-//            }
-//        }
-//        catch (Exception e) {
-//            JOptionPane.showMessageDialog(this,  e.toString(), "Borrar",
-//                JOptionPane.INFORMATION_MESSAGE);
-//        }
+        BaseDatos.Operacion Operaciones= new BaseDatos.Operacion();
+        try{
+                         
+            
+            int Res= JOptionPane.showConfirmDialog(new JFrame(),"Eliminar el Articulo ?",
+                "Eliminar",JOptionPane.YES_NO_OPTION) ;
+            if (Res== JOptionPane.YES_OPTION){
+                accion="borrar";
+                Operaciones.BorrarArticulos(Id_Actualizar);
+                CargarArticulos();
+                txtCodigo.setText("");
+                txtDescripcion.setText("");
+                txtPrecio.setText("");
+                Id_Actualizar=-1;
+            }
+        }
+        catch (Exception e) {
+            JOptionPane.showMessageDialog(this,  e.toString(), "Borrar",
+                JOptionPane.INFORMATION_MESSAGE);
+        }
 
     }//GEN-LAST:event_cmdEliminarActionPerformed
 
@@ -219,20 +310,50 @@ public class frmArticulos extends javax.swing.JFrame {
         // TODO add your handling code here:
         txtCodigo.setText("");
         txtDescripcion.setText("");
+        txtPrecio.setText("");
       //  accion="Nuevo";
     }//GEN-LAST:event_cmdNuevoActionPerformed
 
     private void cmdGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdGuardarActionPerformed
         // TODO add your handling code here:
-//        BaseDatos.Operacion Operaciones= new BaseDatos.Operacion();
-//        if (accion.equals("Nuevo")){
-//            Operaciones.InsertarFamilia(txtCodigo.getText(), txtDescripcion.getText());
-//        }
-//        else{
-//            Operaciones.ActualizarFamilia(Id_Actualizar,txtCodigo.getText(), txtDescripcion.getText());
-//        }
-//        CargarFamilias();
+        BaseDatos.Operacion Operaciones= new BaseDatos.Operacion();
+        
+        if (accion.equals("Nuevo")){
+            Operaciones.InsertarArticulos(txtCodigo.getText(), txtDescripcion.getText(),Double.valueOf(txtPrecio.getText()).doubleValue(),IdFamilia);
+        }
+        else{
+            Operaciones.ActualizarArticulos(Id_Actualizar,txtCodigo.getText(), txtDescripcion.getText(),Double.valueOf(txtPrecio.getText()).doubleValue(),IdFamilia);
+        }
+        CargarArticulos();
     }//GEN-LAST:event_cmdGuardarActionPerformed
+
+    private void mnuEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuEditarActionPerformed
+        // TODO add your handling code here:
+        
+        int filaSele;
+        String ID;
+        try{
+            
+           filaSele=this.tblArticulos.getSelectedRow(); 
+           if (filaSele==-1){
+               JOptionPane.showMessageDialog(this, "Seleccione una fila ", "Grid", JOptionPane.INFORMATION_MESSAGE);
+           }
+           else{
+               accion="modificar";
+               modelo= (DefaultTableModel) this.tblArticulos.getModel();
+               ID = (String) modelo.getValueAt(filaSele, 0);
+               //habilitar();
+               BuscarArticulosID(ID);
+              // habilitar();
+           }        
+        }
+          catch (Exception e) {
+            JOptionPane.showMessageDialog(this,e.toString(), "Grid", JOptionPane.INFORMATION_MESSAGE);
+        }
+        
+        
+        
+    }//GEN-LAST:event_mnuEditarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -277,10 +398,15 @@ public class frmArticulos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tblfamilias;
+    private javax.swing.JMenuItem mnuBorrar;
+    private javax.swing.JMenuItem mnuEditar;
+    private javax.swing.JTable tblArticulos;
     private javax.swing.JTextField txtCodigo;
     private javax.swing.JTextField txtDescripcion;
+    private javax.swing.JTextField txtPrecio;
     // End of variables declaration//GEN-END:variables
 }

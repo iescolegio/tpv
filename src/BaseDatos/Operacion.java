@@ -89,7 +89,7 @@ public class Operacion {
       //  list <ArrayList>(Familias);
        Session s= utilidades.HibernateUtil.getSessionFactory().getCurrentSession();
        s.beginTransaction();
-       Query query = s.createQuery("from Familias");
+       Query query = s.createQuery("from Familias order by Codigo");
        List ListaFamilias = query.list();
        s.getTransaction().commit();
       
@@ -166,6 +166,7 @@ public class Operacion {
         s.getTransaction().commit();
    }
     
+     
        public void BorrarArticulos(int ID){
         
         entidades.Articulos  Articulos = new entidades.Articulos();
@@ -178,7 +179,20 @@ public class Operacion {
         s.getTransaction().commit();
        
     }
-    
+       
+  public int  BorrarArticulosFamilia(int ID){
+      
+       Session s= utilidades.HibernateUtil.getSessionFactory().getCurrentSession();
+       s.beginTransaction();
+     
+       Query query = s.createQuery("delete Articulos Where IDfamilias=:IDFamilia");
+       query.setParameter("IDFamilia", ID);
+       int result = query.executeUpdate();
+     
+        s.getTransaction().commit();
+        return (result);   
+    }
+               
     public List  ObtenerArticulos(){
       //  list <ArrayList>(Familias);
        Session s= utilidades.HibernateUtil.getSessionFactory().getCurrentSession();
@@ -191,6 +205,17 @@ public class Operacion {
         
     }
     
+   public List  ObtenerArticulosFamilia(String ID){
+      //  list <ArrayList>(Familias);
+       Session s= utilidades.HibernateUtil.getSessionFactory().getCurrentSession();
+       s.beginTransaction();
+       Query query = s.createQuery("from Articulos Where IDfamilias=:IDFamilia");
+       query.setParameter("IDFamilia", ID);
+       List ListaArticulos = query.list();
+       s.getTransaction().commit();
+        return (ListaArticulos);   
+    }
+   
   public List  ObtenerArticulosID(String ID){
       //  list <ArrayList>(Familias);
        Session s= utilidades.HibernateUtil.getSessionFactory().getCurrentSession();

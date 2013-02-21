@@ -10,6 +10,7 @@ import java.awt.Component;
 import java.util.List;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -159,6 +160,11 @@ public class tpvTactil extends javax.swing.JFrame {
         jButton7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton7.setText("jButton7oohjo");
         jButton7.setName("articulos1"); // NOI18N
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton7);
 
         jButton11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -246,7 +252,7 @@ public class tpvTactil extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null}
+
             },
             new String [] {
                 "Cantidad", "Descripción", "Importe"
@@ -374,6 +380,24 @@ public class tpvTactil extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    Familias ObtenerIdFamiliaPorCodigo(String Codigo){
+       
+        BaseDatos.Operacion Operaciones= new BaseDatos.Operacion(); 
+        Familias F;
+        List ListaFamilias= Operaciones.ObtenerFamilias();
+        for (int i=0;i<ListaFamilias.size();i++){
+            F=(Familias) ListaFamilias.get(i);
+            if (F.getCodigo().equals(Codigo)){
+                return F;
+            }
+                    
+        }
+        return null;
+        
+       
+    }
+            
+    
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
         BorrarTextoBotones(jPanel1);
@@ -402,11 +426,11 @@ public class tpvTactil extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
          BorrarTextoBotones(jPanel2);
-              BaseDatos.Operacion Operaciones= new BaseDatos.Operacion(); 
-              Familias F;
-              F=Operaciones.ObtenerIdFamiliaPorCodigo(jButton1.getText());
-             
-             CargarArticulos(0,String.valueOf(F.getIdfamilias()));
+     //     BaseDatos.Operacion Operaciones= new BaseDatos.Operacion(); 
+          Familias F;
+         // F=Operaciones.ObtenerIdFamiliaPorCodigo(jButton1.getText());
+         F=ObtenerIdFamiliaPorCodigo(jButton1.getText());
+         CargarArticulos(0,String.valueOf(F.getIdfamilias()));
               
 
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -450,6 +474,15 @@ public class tpvTactil extends javax.swing.JFrame {
              
              CargarArticulos(0,String.valueOf(F.getIdfamilias()));
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        
+        DefaultTableModel temp = (DefaultTableModel) jTable1.getModel();
+        Object nuevo[]= {txtDisplay.getText(),jButton7.getText() ,"4"}; //esto es por las tres columnas aunque puede variar
+        temp.addRow(nuevo);
+    
+    }//GEN-LAST:event_jButton7ActionPerformed
  
  int CargarArticulos(int PosInicial,String IdFamilia){
     int IndiceBotones=0;
@@ -457,13 +490,8 @@ public class tpvTactil extends javax.swing.JFrame {
     Component[] componentes =jPanel2.getComponents();
     BaseDatos.Operacion Operaciones= new BaseDatos.Operacion(); 
     List ListaArticulos;
-   
     ListaArticulos= Operaciones.ObtenerArticulosFamilia(IdFamilia);
-   
-        
-    
     if (PosInicial==ListaArticulos.size()) PosInicial=0;
-   
       for  ( i=PosInicial;i<ListaArticulos.size();i++){
          Articulos articulo=  (Articulos) ListaArticulos.get(i);
          JButton Boton;

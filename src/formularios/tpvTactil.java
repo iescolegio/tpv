@@ -9,6 +9,7 @@ import entidades.Familias;
 import java.awt.Component;
 import java.util.List;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
@@ -41,12 +42,12 @@ public class tpvTactil extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        cmdFamilia1 = new javax.swing.JButton();
+        cmdFamilia2 = new javax.swing.JButton();
+        cmdFamilia3 = new javax.swing.JButton();
+        cmdFamilia4 = new javax.swing.JButton();
+        cmdFamilia5 = new javax.swing.JButton();
+        cmdFamilia6 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jButton7 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
@@ -88,71 +89,65 @@ public class tpvTactil extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(51, 153, 255));
         jPanel1.setLayout(new java.awt.GridLayout(3, 2, 2, 2));
 
-        jButton1.setBackground(new java.awt.Color(153, 204, 255));
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton1.setText("jButton1");
-        jButton1.setName("familia1"); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        cmdFamilia1.setBackground(new java.awt.Color(153, 204, 255));
+        cmdFamilia1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cmdFamilia1.setName("familia1"); // NOI18N
+        cmdFamilia1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                cmdFamilia1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1);
+        jPanel1.add(cmdFamilia1);
 
-        jButton2.setBackground(new java.awt.Color(153, 204, 255));
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton2.setText("jButton2");
-        jButton2.setName("familia2"); // NOI18N
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        cmdFamilia2.setBackground(new java.awt.Color(153, 204, 255));
+        cmdFamilia2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cmdFamilia2.setName("familia2"); // NOI18N
+        cmdFamilia2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                cmdFamilia2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2);
+        jPanel1.add(cmdFamilia2);
 
-        jButton4.setBackground(new java.awt.Color(153, 204, 255));
-        jButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton4.setText("jButton4");
-        jButton4.setName("familia4"); // NOI18N
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        cmdFamilia3.setBackground(new java.awt.Color(153, 204, 255));
+        cmdFamilia3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cmdFamilia3.setName("familia4"); // NOI18N
+        cmdFamilia3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                cmdFamilia3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4);
+        jPanel1.add(cmdFamilia3);
 
-        jButton5.setBackground(new java.awt.Color(153, 204, 255));
-        jButton5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton5.setText("jButton5");
-        jButton5.setName("familia5"); // NOI18N
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        cmdFamilia4.setBackground(new java.awt.Color(153, 204, 255));
+        cmdFamilia4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cmdFamilia4.setName("familia5"); // NOI18N
+        cmdFamilia4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                cmdFamilia4ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton5);
+        jPanel1.add(cmdFamilia4);
 
-        jButton3.setBackground(new java.awt.Color(153, 204, 255));
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton3.setText("jButton3");
-        jButton3.setName("familia3"); // NOI18N
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        cmdFamilia5.setBackground(new java.awt.Color(153, 204, 255));
+        cmdFamilia5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cmdFamilia5.setName("familia3"); // NOI18N
+        cmdFamilia5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                cmdFamilia5ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3);
+        jPanel1.add(cmdFamilia5);
 
-        jButton6.setBackground(new java.awt.Color(153, 204, 255));
-        jButton6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton6.setText("jButton6");
-        jButton6.setName("familia6"); // NOI18N
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        cmdFamilia6.setBackground(new java.awt.Color(153, 204, 255));
+        cmdFamilia6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cmdFamilia6.setName("familia6"); // NOI18N
+        cmdFamilia6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                cmdFamilia6ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton6);
+        jPanel1.add(cmdFamilia6);
 
         jPanel2.setBackground(new java.awt.Color(255, 204, 204));
         jPanel2.setLayout(new java.awt.GridLayout(3, 6, 2, 2));
@@ -170,56 +165,111 @@ public class tpvTactil extends javax.swing.JFrame {
         jButton11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton11.setText("jButton11");
         jButton11.setName("articulos2"); // NOI18N
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton11);
 
         jButton14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton14.setText("jButton14");
         jButton14.setName("articulos3"); // NOI18N
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton14);
 
         jButton9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton9.setText("jButton9");
         jButton9.setName("articulos4"); // NOI18N
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton9);
 
         jButton10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton10.setText("jButton10");
         jButton10.setName("articulos5"); // NOI18N
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton10);
 
         jButton15.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton15.setText("jButton15");
         jButton15.setName("articulos6"); // NOI18N
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton15);
 
         jButton17.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton17.setText("jButton17");
         jButton17.setName("articulos7"); // NOI18N
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton17);
 
         jButton12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton12.setText("jButton12");
         jButton12.setName("articulos8"); // NOI18N
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton12);
 
         jButton20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton20.setText("jButton20");
         jButton20.setName("articulos9"); // NOI18N
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton20ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton20);
 
         jButton16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton16.setText("jButton16");
         jButton16.setName("articulos10"); // NOI18N
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton16);
 
         jButton18.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton18.setText("jButton18");
         jButton18.setName("articulos11"); // NOI18N
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton18);
 
         jButton19.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton19.setText("jButton19");
         jButton19.setName("articulos12"); // NOI18N
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton19);
 
         jButton8.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -233,6 +283,7 @@ public class tpvTactil extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 153));
         jPanel3.setLayout(new java.awt.GridLayout(8, 1));
 
+        jButton13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton13.setText("Salir");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -241,9 +292,16 @@ public class tpvTactil extends javax.swing.JFrame {
         });
         jPanel3.add(jButton13);
 
-        jButton21.setText("jButton21");
+        jButton21.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton21.setText("Borrar");
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton21ActionPerformed(evt);
+            }
+        });
         jPanel3.add(jButton21);
 
+        jButton22.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton22.setText("jButton22");
         jPanel3.add(jButton22);
 
@@ -255,7 +313,7 @@ public class tpvTactil extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Cantidad", "Descripción", "Importe"
+                "Cantidad", "Descripción", "Precio"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -380,6 +438,23 @@ public class tpvTactil extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+        Articulos ObtenerPrecioArticuloPorCodigo(String Codigo){
+       
+        BaseDatos.Operacion Operaciones= new BaseDatos.Operacion(); 
+        Articulos A;
+        List ListaArticulos= Operaciones.ObtenerArticulos();
+        for (int i=0;i<ListaArticulos.size();i++){
+            A=(Articulos) ListaArticulos.get(i);
+            if (A.getDescripcion().equals(Codigo)){
+                return A;
+            }
+                    
+        }
+        return null;
+        
+       
+    }
+    
     Familias ObtenerIdFamiliaPorCodigo(String Codigo){
        
         BaseDatos.Operacion Operaciones= new BaseDatos.Operacion(); 
@@ -413,76 +488,184 @@ public class tpvTactil extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton24ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void cmdFamilia2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdFamilia2ActionPerformed
         // TODO add your handling code here:
          BorrarTextoBotones(jPanel2);
          BaseDatos.Operacion Operaciones= new BaseDatos.Operacion(); 
           Familias F;
-          F=Operaciones.ObtenerIdFamiliaPorCodigo(jButton2.getText());
+          F=Operaciones.ObtenerIdFamiliaPorCodigo(cmdFamilia2.getText());
            CargarArticulos(0,String.valueOf(F.getIdfamilias()));
         // txtDisplay.setText(String.valueOf(F.getIdfamilias()));
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_cmdFamilia2ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void cmdFamilia1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdFamilia1ActionPerformed
         // TODO add your handling code here:
          BorrarTextoBotones(jPanel2);
      //     BaseDatos.Operacion Operaciones= new BaseDatos.Operacion(); 
           Familias F;
          // F=Operaciones.ObtenerIdFamiliaPorCodigo(jButton1.getText());
-         F=ObtenerIdFamiliaPorCodigo(jButton1.getText());
+         F=ObtenerIdFamiliaPorCodigo(cmdFamilia1.getText());
          CargarArticulos(0,String.valueOf(F.getIdfamilias()));
               
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_cmdFamilia1ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void cmdFamilia3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdFamilia3ActionPerformed
         // TODO add your handling code here:
          BorrarTextoBotones(jPanel2);
         BaseDatos.Operacion Operaciones= new BaseDatos.Operacion(); 
               Familias F;
-              F=Operaciones.ObtenerIdFamiliaPorCodigo(jButton4.getText());
+              F=Operaciones.ObtenerIdFamiliaPorCodigo(cmdFamilia3.getText());
              
              CargarArticulos(0,String.valueOf(F.getIdfamilias()));
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_cmdFamilia3ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void cmdFamilia4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdFamilia4ActionPerformed
         // TODO add your handling code here:
          BorrarTextoBotones(jPanel2);
         BaseDatos.Operacion Operaciones= new BaseDatos.Operacion(); 
               Familias F;
-              F=Operaciones.ObtenerIdFamiliaPorCodigo(jButton5.getText());
+              F=Operaciones.ObtenerIdFamiliaPorCodigo(cmdFamilia4.getText());
              
              CargarArticulos(0,String.valueOf(F.getIdfamilias()));
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_cmdFamilia4ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void cmdFamilia5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdFamilia5ActionPerformed
         // TODO add your handling code here:
          BorrarTextoBotones(jPanel2);
         BaseDatos.Operacion Operaciones= new BaseDatos.Operacion(); 
               Familias F;
-              F=Operaciones.ObtenerIdFamiliaPorCodigo(jButton3.getText());
+              F=Operaciones.ObtenerIdFamiliaPorCodigo(cmdFamilia5.getText());
              
              CargarArticulos(0,String.valueOf(F.getIdfamilias()));
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_cmdFamilia5ActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void cmdFamilia6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdFamilia6ActionPerformed
         // TODO add your handling code here
          BorrarTextoBotones(jPanel2);
         BaseDatos.Operacion Operaciones= new BaseDatos.Operacion(); 
               Familias F;
-              F=Operaciones.ObtenerIdFamiliaPorCodigo(jButton6.getText());
+              F=Operaciones.ObtenerIdFamiliaPorCodigo(cmdFamilia6.getText());
              
              CargarArticulos(0,String.valueOf(F.getIdfamilias()));
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_cmdFamilia6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
         
         DefaultTableModel temp = (DefaultTableModel) jTable1.getModel();
-        Object nuevo[]= {txtDisplay.getText(),jButton7.getText() ,"4"}; //esto es por las tres columnas aunque puede variar
+        Articulos A=ObtenerPrecioArticuloPorCodigo(jButton7.getText());
+        Object nuevo[]= {txtDisplay.getText(),jButton7.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
         temp.addRow(nuevo);
     
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel temp = (DefaultTableModel) jTable1.getModel();
+        Articulos A=ObtenerPrecioArticuloPorCodigo(jButton11.getText());
+        Object nuevo[]= {txtDisplay.getText(),jButton11.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
+        temp.addRow(nuevo);
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel temp = (DefaultTableModel) jTable1.getModel();
+        Articulos A=ObtenerPrecioArticuloPorCodigo(jButton14.getText());
+        Object nuevo[]= {txtDisplay.getText(),jButton14.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
+        temp.addRow(nuevo);
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel temp = (DefaultTableModel) jTable1.getModel();
+        Articulos A=ObtenerPrecioArticuloPorCodigo(jButton9.getText());
+        Object nuevo[]= {txtDisplay.getText(),jButton9.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
+        temp.addRow(nuevo);
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel temp = (DefaultTableModel) jTable1.getModel();
+        Articulos A=ObtenerPrecioArticuloPorCodigo(jButton10.getText());
+        Object nuevo[]= {txtDisplay.getText(),jButton10.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
+        temp.addRow(nuevo);
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel temp = (DefaultTableModel) jTable1.getModel();
+        Articulos A=ObtenerPrecioArticuloPorCodigo(jButton15.getText());
+        Object nuevo[]= {txtDisplay.getText(),jButton15.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
+        temp.addRow(nuevo);
+    }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel temp = (DefaultTableModel) jTable1.getModel();
+        Articulos A=ObtenerPrecioArticuloPorCodigo(jButton17.getText());
+        Object nuevo[]= {txtDisplay.getText(),jButton17.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
+        temp.addRow(nuevo);
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel temp = (DefaultTableModel) jTable1.getModel();
+        Articulos A=ObtenerPrecioArticuloPorCodigo(jButton12.getText());
+        Object nuevo[]= {txtDisplay.getText(),jButton12.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
+        temp.addRow(nuevo);
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel temp = (DefaultTableModel) jTable1.getModel();
+        Articulos A=ObtenerPrecioArticuloPorCodigo(jButton20.getText());
+        Object nuevo[]= {txtDisplay.getText(),jButton20.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
+        temp.addRow(nuevo);
+    }//GEN-LAST:event_jButton20ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel temp = (DefaultTableModel) jTable1.getModel();
+        Articulos A=ObtenerPrecioArticuloPorCodigo(jButton16.getText());
+        Object nuevo[]= {txtDisplay.getText(),jButton16.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
+        temp.addRow(nuevo);
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel temp = (DefaultTableModel) jTable1.getModel();
+        Articulos A=ObtenerPrecioArticuloPorCodigo(jButton18.getText());
+        Object nuevo[]= {txtDisplay.getText(),jButton18.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
+        temp.addRow(nuevo);
+    }//GEN-LAST:event_jButton18ActionPerformed
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel temp = (DefaultTableModel) jTable1.getModel();
+        Articulos A=ObtenerPrecioArticuloPorCodigo(jButton19.getText());
+        Object nuevo[]= {txtDisplay.getText(),jButton19.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
+        temp.addRow(nuevo);
+    }//GEN-LAST:event_jButton19ActionPerformed
+
+    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+        // TODO add your handling code here:
+        int filaSele;
+        try{
+           filaSele=this.jTable1.getSelectedRow(); 
+           if (filaSele==-1){
+               JOptionPane.showMessageDialog(this, "Seleccione una fila ", "Grid",
+                       JOptionPane.INFORMATION_MESSAGE);
+           }
+           else{
+              ((DefaultTableModel) jTable1.getModel()).removeRow(filaSele);
+           }        
+        }
+          catch (Exception e) {
+            JOptionPane.showMessageDialog(this,e.toString(), "Grid", 
+                    JOptionPane.INFORMATION_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton21ActionPerformed
  
  int CargarArticulos(int PosInicial,String IdFamilia){
     int IndiceBotones=0;
@@ -496,7 +679,7 @@ public class tpvTactil extends javax.swing.JFrame {
          Articulos articulo=  (Articulos) ListaArticulos.get(i);
          JButton Boton;
          Boton= BotonPorNombre ("articulos"+(IndiceBotones+1),jPanel2);
-         Boton.setText(articulo.getCodigo());
+         Boton.setText(articulo.getDescripcion());
          Boton.setEnabled(true);
          if (IndiceBotones==11){
               return i+1;
@@ -587,7 +770,12 @@ public class tpvTactil extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton cmdFamilia1;
+    private javax.swing.JButton cmdFamilia2;
+    private javax.swing.JButton cmdFamilia3;
+    private javax.swing.JButton cmdFamilia4;
+    private javax.swing.JButton cmdFamilia5;
+    private javax.swing.JButton cmdFamilia6;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
@@ -598,7 +786,6 @@ public class tpvTactil extends javax.swing.JFrame {
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton22;
@@ -609,16 +796,12 @@ public class tpvTactil extends javax.swing.JFrame {
     private javax.swing.JButton jButton27;
     private javax.swing.JButton jButton28;
     private javax.swing.JButton jButton29;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton30;
     private javax.swing.JButton jButton31;
     private javax.swing.JButton jButton32;
     private javax.swing.JButton jButton33;
     private javax.swing.JButton jButton34;
     private javax.swing.JButton jButton35;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;

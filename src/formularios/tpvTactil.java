@@ -302,7 +302,12 @@ public class tpvTactil extends javax.swing.JFrame {
         jPanel3.add(jButton21);
 
         jButton22.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton22.setText("jButton22");
+        jButton22.setText("Codigo de Barras");
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton22ActionPerformed(evt);
+            }
+        });
         jPanel3.add(jButton22);
 
         jButton23.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -486,6 +491,7 @@ public class tpvTactil extends javax.swing.JFrame {
 
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
         // TODO add your handling code here:
+
     }//GEN-LAST:event_jButton24ActionPerformed
 
     private void cmdFamilia2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdFamilia2ActionPerformed
@@ -666,6 +672,14 @@ public class tpvTactil extends javax.swing.JFrame {
                     JOptionPane.INFORMATION_MESSAGE);
         }
     }//GEN-LAST:event_jButton21ActionPerformed
+
+    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+        // TODO add your handling code here:
+        this.setEnabled(false);
+        
+        frmCodigoBarras f = new frmCodigoBarras(this,this.jTable1);
+        f.setVisible(true);
+    }//GEN-LAST:event_jButton22ActionPerformed
  
  int CargarArticulos(int PosInicial,String IdFamilia){
     int IndiceBotones=0;

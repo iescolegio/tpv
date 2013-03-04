@@ -593,6 +593,35 @@ public class tpvTactil extends javax.swing.JFrame {
         Articulos A=ObtenerPrecioArticuloPorCodigo(jButton7.getText());
         Object nuevo[]= {txtDisplay.getText(),jButton7.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
         temp.addRow(nuevo);
+        
+        
+      
+        
+        
+        
+          BaseDatos.Operacion Operaciones= new BaseDatos.Operacion(); 
+        String fecha="12/10/2014";
+        
+        
+        
+        String Numero=Operaciones.ObtenerNumeroTicket();
+        SimpleDateFormat formatoDeFecha = new SimpleDateFormat("dd/MM/yyyy");
+        entidades.Lineasticket Lineasticket;
+                
+       
+       // try {
+        //   String Numero=Operaciones.InsertarTickets(formatoDeFecha.parse(fecha), 0, 0);
+           
+          //Tickets tickets= Operaciones.ObtenerIdTicketPorNumero(Numero);
+          int Cantidad= Integer.parseInt((txtDisplay.getText().toString()));
+          Operaciones.InsertarLineaTickets(Numero,jButton7.getText(),
+                   Cantidad,A.getPrecio(),A.getPrecio()*Cantidad,0,0,0);
+          
+          //Lineasticket=Operaciones.ObtenerIdLineaTicketPorNumero(Numero,1);
+          //Operaciones.BorrarLineaTickets(Lineasticket.getIdTicket());
+        
+        
+        
     
     }//GEN-LAST:event_jButton7ActionPerformed
 
@@ -721,17 +750,8 @@ public class tpvTactil extends javax.swing.JFrame {
 //          else{ 
 //              ActualizarContador(Contador.getIdcontadores(),"Familias",Contador.getValor()+1);
 //          } 
-        String fecha="12/10/2014";
-        String Numero="3";
-        SimpleDateFormat formatoDeFecha = new SimpleDateFormat("dd/MM/yyyy");
-       
-         BaseDatos.Operacion Operaciones= new BaseDatos.Operacion(); 
-       // try {
-        //   String Numero=Operaciones.InsertarTickets(formatoDeFecha.parse(fecha), 0, 0);
-           
-          //Tickets tickets= Operaciones.ObtenerIdTicketPorNumero(Numero);
-          Operaciones.InsertarLineaTickets(Numero,"sdfasdf",1,2,2,1,2);
-           
+      
+          
 //        } catch (ParseException ex) {
 //            Logger.getLogger(tpvTactil.class.getName()).log(Level.SEVERE, null, ex);
 //        }

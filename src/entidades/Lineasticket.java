@@ -1,5 +1,5 @@
 package entidades;
-// Generated 27-feb-2013 12:31:00 by Hibernate Tools 3.2.1.GA
+// Generated 04-mar-2013 11:00:55 by Hibernate Tools 3.2.1.GA
 
 
 import java.util.Date;
@@ -22,6 +22,7 @@ public class Lineasticket  implements java.io.Serializable {
      private Integer descuento;
      private Double importe;
      private Double importeConIva;
+     private Integer nlinea;
 
     public Lineasticket() {
     }
@@ -30,7 +31,7 @@ public class Lineasticket  implements java.io.Serializable {
     public Lineasticket(int idTicket) {
         this.idTicket = idTicket;
     }
-    public Lineasticket(int idTicket, String numeroTicket, String codigoEmpleado, String concepto, Integer cantidad, Double precio, Double iva, Date fechaMod, String usuarioMod, Integer descuento, Double importe, Double importeConIva) {
+    public Lineasticket(int idTicket, String numeroTicket, String codigoEmpleado, String concepto, Integer cantidad, Double precio, Double iva, Date fechaMod, String usuarioMod, Integer descuento, Double importe, Double importeConIva, Integer nlinea) {
        this.idTicket = idTicket;
        this.numeroTicket = numeroTicket;
        this.codigoEmpleado = codigoEmpleado;
@@ -43,6 +44,7 @@ public class Lineasticket  implements java.io.Serializable {
        this.descuento = descuento;
        this.importe = importe;
        this.importeConIva = importeConIva;
+       this.nlinea = nlinea;
     }
    
     public int getIdTicket() {
@@ -128,6 +130,13 @@ public class Lineasticket  implements java.io.Serializable {
     
     public void setImporteConIva(Double importeConIva) {
         this.importeConIva = importeConIva;
+    }
+    public Integer getNlinea() {
+        return this.nlinea;
+    }
+    
+    public void setNlinea(Integer nlinea) {
+        this.nlinea = nlinea;
     }
 
 

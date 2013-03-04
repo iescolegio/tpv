@@ -7,6 +7,7 @@ package BaseDatos;
 import entidades.Contadores;
 import entidades.Familias;
 import entidades.Tickets;
+import entidades.Lineasticket;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -30,17 +31,32 @@ public class Operacion {
     }
     
     
+    
+    public String ObtenerNumeroTicket(){
+        entidades.Contadores Contador=  ObtenerContador("Numeroticket");
+    
+          if (Contador.getValor()==0){
+              InsertarContador("Numeroticket",1);
+          }
+          else{ 
+              ActualizarContador(Contador.getIdcontadores(),"Numeroticket",Contador.getValor()+1);
+          } 
+          return Contador.getValor().toString();
+    }
+            
+    
+    
      /*
      **********************************************************************
-     Funciones para trabajar con la tabla Tickets* 
+     Funciones para trabajar con la tabla Linea Tickets* 
      **********************************************************************
      */
     
     public void InsertarLineaTickets(String Numero,String Concepto,
                                 int Cantidad,double Precio,double Importe,
-                                double Iva,int Descuento){
+                                double Iva,int Descuento,int NLinea){
         
-        entidades.Lineasticket  lineasticket = new entidades.Lineasticket();
+        Lineasticket  lineasticket = new Lineasticket();
        
         entidades.Contadores Contador=  ObtenerContador("Lineasticket");
     
@@ -60,6 +76,7 @@ public class Operacion {
         lineasticket.setPrecio(Precio);
         lineasticket.setIva(Iva);
         lineasticket.setDescuento(Descuento);
+        lineasticket.setNlinea(NLinea);
                 
         
         lineasticket.setUsuarioMod("prueba");
@@ -73,7 +90,41 @@ public class Operacion {
        
     }
     
+     public Lineasticket ObtenerIdLineaTicketPorNumero(String Numero,Integer Linea){
+        Session s= utilidades.HibernateUtil.getSessionFactory().getCurrentSession();
+        s.beginTransaction();
+        Query query = s.createQuery("from Lineasticket Where NumeroTicket = :Numero and NLinea = :Linea ");
+        query.setParameter("Numero", Numero);
+        query.setParameter("Linea", Linea);
+                 
+        Iterator iter = query.iterate();
+        Lineasticket Lineastickets;
+      
+        while (iter.hasNext()){
+           Lineastickets = (Lineasticket) iter.next();  // fetch the object
+           return Lineastickets; 
+        }
+        
+        s.getTransaction().commit();
+        return null;
+      
+        
+    }
+    
+     public void BorrarLineaTickets(int ID){
+        
+        entidades.Lineasticket  Lineasticket = new entidades.Lineasticket();
+        Lineasticket.setIdTicket(ID);
      
+        Session s= utilidades.HibernateUtil.getSessionFactory().getCurrentSession();
+        
+        s.beginTransaction();
+        s.delete(Lineasticket);
+        s.getTransaction().commit();
+       
+    }
+    
+    
       
     public void ActualizarLineaTickets(int ID,String NumeroTicket,Date FechaTicket,int Pagado, int Cerrado){
        
@@ -100,25 +151,7 @@ public class Operacion {
     
     
     
-    public Tickets ObtenerIdLineaTicketPorNumero(String Numero){
-        Session s= utilidades.HibernateUtil.getSessionFactory().getCurrentSession();
-        s.beginTransaction();
-        Query query = s.createQuery("from Tickets where Numero = :Numero ");
-        query.setParameter("Numero", Numero);
-                 
-        Iterator iter = query.iterate();
-        Tickets tickets;//=new Familias();
-      
-        while (iter.hasNext()){
-           tickets = (entidades.Tickets) iter.next();  // fetch the object
-           return tickets; 
-        }
-        
-        s.getTransaction().commit();
-        return null;
-      
-        
-    }
+   
     
     
     

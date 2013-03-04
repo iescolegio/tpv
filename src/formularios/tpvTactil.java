@@ -6,10 +6,12 @@ package formularios;
 
 import entidades.Articulos;
 import entidades.Familias;
+import entidades.Lineasticket;
 import entidades.Tickets;
 import java.awt.Component;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -17,6 +19,7 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
+import utilidades.ManejadorFechas;
 
 /**
  *
@@ -28,12 +31,14 @@ public class tpvTactil extends javax.swing.JFrame {
      * Creates new form tpvTactil
      */
     private int Ultima=0;
+    private String NumeroTicket="";
+    
     public tpvTactil() {
         initComponents();
         setLocationRelativeTo(null);
         BorrarTextoBotones(jPanel1);
         BorrarTextoBotones(jPanel2);
-       Ultima= CargarFamilias(Ultima);
+        Ultima= CargarFamilias(Ultima);
       
     }
 
@@ -586,40 +591,34 @@ public class tpvTactil extends javax.swing.JFrame {
              CargarArticulos(0,String.valueOf(F.getIdfamilias()));
     }//GEN-LAST:event_cmdFamilia6ActionPerformed
 
+
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
         
+        ManejadorFechas FechaActual=new ManejadorFechas();
         DefaultTableModel temp = (DefaultTableModel) jTable1.getModel();
         Articulos A=ObtenerPrecioArticuloPorCodigo(jButton7.getText());
         Object nuevo[]= {txtDisplay.getText(),jButton7.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
         temp.addRow(nuevo);
-        
-        
-      
-        
-        
-        
-          BaseDatos.Operacion Operaciones= new BaseDatos.Operacion(); 
-        String fecha="12/10/2014";
-        
-        
-        
-        String Numero=Operaciones.ObtenerNumeroTicket();
-        SimpleDateFormat formatoDeFecha = new SimpleDateFormat("dd/MM/yyyy");
-        entidades.Lineasticket Lineasticket;
-                
+              
        
-       // try {
-        //   String Numero=Operaciones.InsertarTickets(formatoDeFecha.parse(fecha), 0, 0);
-           
-          //Tickets tickets= Operaciones.ObtenerIdTicketPorNumero(Numero);
-          int Cantidad= Integer.parseInt((txtDisplay.getText().toString()));
-          Operaciones.InsertarLineaTickets(Numero,jButton7.getText(),
+        BaseDatos.Operacion Operaciones= new BaseDatos.Operacion(); 
+        if (NumeroTicket.length()==0){ 
+            String fecha=FechaActual.getFechaActual();         
+            NumeroTicket=Operaciones.ObtenerNumeroTicket();
+            Operaciones.InsertarTickets(new Date(), 0, 0);
+        }
+        
+        
+        
+             
+        
+        int Cantidad= Integer.parseInt((txtDisplay.getText().toString()));
+              
+        Operaciones.InsertarLineaTickets(NumeroTicket,jButton7.getText(),
                    Cantidad,A.getPrecio(),A.getPrecio()*Cantidad,0,0,0);
           
-          //Lineasticket=Operaciones.ObtenerIdLineaTicketPorNumero(Numero,1);
-          //Operaciones.BorrarLineaTickets(Lineasticket.getIdTicket());
-        
+         
         
         
     
@@ -723,13 +722,18 @@ public class tpvTactil extends javax.swing.JFrame {
                        JOptionPane.INFORMATION_MESSAGE);
            }
            else{
+               BaseDatos.Operacion Operaciones= new BaseDatos.Operacion(); 
               ((DefaultTableModel) jTable1.getModel()).removeRow(filaSele);
+               Operaciones.BorrarLineaTickets(Operaciones.ObtenerIdLineaTicketPorNumero("33",1).getIdTicket());
            }        
         }
           catch (Exception e) {
             JOptionPane.showMessageDialog(this,e.toString(), "Grid", 
                     JOptionPane.INFORMATION_MESSAGE);
         }
+        
+        
+        
     }//GEN-LAST:event_jButton21ActionPerformed
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
@@ -742,6 +746,9 @@ public class tpvTactil extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        
+        NumeroTicket="";
+        
 //      entidades.Contadores Contador=  ObtenerContador("Familias");
 //  
 //          if (Contador.getValor()==0){
@@ -760,6 +767,8 @@ public class tpvTactil extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+       
+        
     }//GEN-LAST:event_jButton2ActionPerformed
  
  int CargarArticulos(int PosInicial,String IdFamilia){

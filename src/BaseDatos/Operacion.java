@@ -6,8 +6,12 @@ package BaseDatos;
 
 import entidades.Contadores;
 import entidades.Familias;
+import entidades.Tickets;
+import java.util.Date;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 //import java.util.HashSet;
 ////import java.util.Iterator;
 //import java.util.List;
@@ -22,6 +26,194 @@ import org.hibernate.Session;
 public class Operacion {
     
     public Operacion(){
+        
+    }
+    
+    
+     /*
+     **********************************************************************
+     Funciones para trabajar con la tabla Tickets* 
+     **********************************************************************
+     */
+    
+    public void InsertarLineaTickets(String Numero,String Concepto,
+                                int Cantidad,double Precio,double Importe,
+                                double Iva,int Descuento){
+        
+        entidades.Lineasticket  lineasticket = new entidades.Lineasticket();
+       
+        entidades.Contadores Contador=  ObtenerContador("Lineasticket");
+    
+          if (Contador.getValor()==0){
+              InsertarContador("Lineasticket",1);
+          }
+          else{ 
+              ActualizarContador(Contador.getIdcontadores(),"Lineasticket",Contador.getValor()+1);
+          }   
+        
+        lineasticket.setIdTicket(Contador.getValor()+1);
+        lineasticket.setNumeroTicket(Numero);
+        lineasticket.setConcepto(Concepto);
+        lineasticket.setCantidad(Cantidad);
+        lineasticket.setConcepto(Concepto);
+        lineasticket.setImporte(Importe);
+        lineasticket.setPrecio(Precio);
+        lineasticket.setIva(Iva);
+        lineasticket.setDescuento(Descuento);
+                
+        
+        lineasticket.setUsuarioMod("prueba");
+       
+        Session s= utilidades.HibernateUtil.getSessionFactory().getCurrentSession();
+        
+        s.beginTransaction();
+        s.save(lineasticket);
+        s.getTransaction().commit();
+       
+       
+    }
+    
+     
+      
+    public void ActualizarLineaTickets(int ID,String NumeroTicket,Date FechaTicket,int Pagado, int Cerrado){
+       
+        entidades.Tickets  tickets = new entidades.Tickets();
+    
+        tickets.setIdTickets(ID);
+        tickets.setNumero(NumeroTicket);
+        tickets.setFecha(FechaTicket);
+        tickets.setCerrado(Cerrado);
+        tickets.setPagado(Pagado);
+                
+        
+        tickets.setUsuarioMod("prueba");
+       
+        Session s= utilidades.HibernateUtil.getSessionFactory().getCurrentSession();
+        
+        s.beginTransaction();
+        s.update(tickets);
+        s.getTransaction().commit();
+        
+        
+        
+    }
+    
+    
+    
+    public Tickets ObtenerIdLineaTicketPorNumero(String Numero){
+        Session s= utilidades.HibernateUtil.getSessionFactory().getCurrentSession();
+        s.beginTransaction();
+        Query query = s.createQuery("from Tickets where Numero = :Numero ");
+        query.setParameter("Numero", Numero);
+                 
+        Iterator iter = query.iterate();
+        Tickets tickets;//=new Familias();
+      
+        while (iter.hasNext()){
+           tickets = (entidades.Tickets) iter.next();  // fetch the object
+           return tickets; 
+        }
+        
+        s.getTransaction().commit();
+        return null;
+      
+        
+    }
+    
+    
+    
+     /*
+     **********************************************************************
+     Funciones para trabajar con la tabla Tickets* 
+     **********************************************************************
+     */
+    
+    public String InsertarTickets(Date FechaTicket,int Pagado, int Cerrado){
+        String NumeroTicket="";
+        entidades.Tickets  tickets = new entidades.Tickets();
+       
+        entidades.Contadores Contador=  ObtenerContador("Tickets");
+        entidades.Contadores ContadorNumeroTicket=  ObtenerContador("NumeroTickets");
+  
+          if (Contador.getValor()==0){
+              InsertarContador("Tickets",1);
+          }
+          else{ 
+              ActualizarContador(Contador.getIdcontadores(),"Tickets",Contador.getValor()+1);
+          }   
+          
+         if (ContadorNumeroTicket.getValor()==0){
+              InsertarContador("NumeroTickets",1);
+          }
+          else{ 
+              ActualizarContador(ContadorNumeroTicket.getIdcontadores(),"NumeroTickets",ContadorNumeroTicket.getValor()+1);
+          }  
+          
+          
+        NumeroTicket=String.valueOf(ContadorNumeroTicket.getValor()+1);
+        
+        tickets.setIdTickets(Contador.getValor()+1);
+        tickets.setNumero(NumeroTicket);
+        tickets.setFecha(FechaTicket);
+        tickets.setCerrado(Cerrado);
+        tickets.setPagado(Pagado);
+                
+        
+        tickets.setUsuarioMod("prueba");
+       
+        Session s= utilidades.HibernateUtil.getSessionFactory().getCurrentSession();
+        
+        s.beginTransaction();
+        s.save(tickets);
+        s.getTransaction().commit();
+       
+        return NumeroTicket;
+    }
+    
+     
+      
+    public void ActualizarTickets(int ID,String NumeroTicket,Date FechaTicket,int Pagado, int Cerrado){
+       
+        entidades.Tickets  tickets = new entidades.Tickets();
+    
+        tickets.setIdTickets(ID);
+        tickets.setNumero(NumeroTicket);
+        tickets.setFecha(FechaTicket);
+        tickets.setCerrado(Cerrado);
+        tickets.setPagado(Pagado);
+                
+        
+        tickets.setUsuarioMod("prueba");
+       
+        Session s= utilidades.HibernateUtil.getSessionFactory().getCurrentSession();
+        
+        s.beginTransaction();
+        s.update(tickets);
+        s.getTransaction().commit();
+        
+        
+        
+    }
+    
+    
+    
+    public Tickets ObtenerIdTicketPorNumero(String Numero){
+        Session s= utilidades.HibernateUtil.getSessionFactory().getCurrentSession();
+        s.beginTransaction();
+        Query query = s.createQuery("from Tickets where Numero = :Numero ");
+        query.setParameter("Numero", Numero);
+                 
+        Iterator iter = query.iterate();
+        Tickets tickets;//=new Familias();
+      
+        while (iter.hasNext()){
+           tickets = (entidades.Tickets) iter.next();  // fetch the object
+           return tickets; 
+        }
+        
+        s.getTransaction().commit();
+        return null;
+      
         
     }
     

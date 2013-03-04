@@ -1,5 +1,5 @@
 package entidades;
-// Generated 23-ene-2013 12:35:51 by Hibernate Tools 3.2.1.GA
+// Generated 27-feb-2013 12:31:00 by Hibernate Tools 3.2.1.GA
 
 
 
@@ -9,28 +9,23 @@ package entidades;
 public class Contadores  implements java.io.Serializable {
 
 
-     private int idcontadores;
+     private Integer idcontadores;
      private String tabla;
      private Integer valor;
 
     public Contadores() {
     }
 
-	
-    public Contadores(int idcontadores) {
-        this.idcontadores = idcontadores;
-    }
-    public Contadores(int idcontadores, String tabla, Integer valor) {
-       this.idcontadores = idcontadores;
+    public Contadores(String tabla, Integer valor) {
        this.tabla = tabla;
        this.valor = valor;
     }
    
-    public int getIdcontadores() {
+    public Integer getIdcontadores() {
         return this.idcontadores;
     }
     
-    public void setIdcontadores(int idcontadores) {
+    public void setIdcontadores(Integer idcontadores) {
         this.idcontadores = idcontadores;
     }
     public String getTabla() {

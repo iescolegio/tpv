@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27-feb-2013 12:31:00 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="entidades.Lineasticket" table="lineasticket" catalog="bdmoises">
+        <id name="idTicket" type="int">
+            <column name="ID_Ticket" />
+            <generator class="assigned" />
+        </id>
+        <property name="numeroTicket" type="string">
+            <column name="NumeroTicket" length="45" />
+        </property>
+        <property name="codigoEmpleado" type="string">
+            <column name="CodigoEmpleado" length="45" />
+        </property>
+        <property name="concepto" type="string">
+            <column name="Concepto" length="45" />
+        </property>
+        <property name="cantidad" type="java.lang.Integer">
+            <column name="Cantidad" />
+        </property>
+        <property name="precio" type="java.lang.Double">
+            <column name="Precio" precision="22" scale="0" />
+        </property>
+        <property name="iva" type="java.lang.Double">
+            <column name="Iva" precision="22" scale="0" />
+        </property>
+        <property name="fechaMod" type="date">
+            <column name="FechaMOD" length="10" />
+        </property>
+        <property name="usuarioMod" type="string">
+            <column name="UsuarioMOD" length="45" />
+        </property>
+        <property name="descuento" type="java.lang.Integer">
+            <column name="Descuento" />
+        </property>
+        <property name="importe" type="java.lang.Double">
+            <column name="Importe" precision="22" scale="0" />
+        </property>
+        <property name="importeConIva" type="java.lang.Double">
+            <column name="ImporteConIva" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

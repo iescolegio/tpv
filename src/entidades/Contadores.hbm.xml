@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 23-ene-2013 12:35:51 by Hibernate Tools 3.2.1.GA -->
+<!-- Generated 27-feb-2013 12:31:00 by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="entidades.Contadores" table="contadores" catalog="bdmoises">
-        <id name="idcontadores" type="int">
+        <id name="idcontadores" type="java.lang.Integer">
             <column name="IDContadores" />
-            <generator class="assigned" />
+            <generator class="identity" />
         </id>
         <property name="tabla" type="string">
             <column name="Tabla" length="20" unique="true" />

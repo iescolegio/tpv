@@ -8,6 +8,8 @@
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.current_session_context_class">thread</property>
     <mapping resource="entidades/Contadores.hbm.xml"/>
+    <mapping resource="entidades/Lineasticket.hbm.xml"/>
+    <mapping resource="entidades/Tickets.hbm.xml"/>
     <mapping resource="entidades/Familias.hbm.xml"/>
     <mapping resource="entidades/Articulos.hbm.xml"/>
   </session-factory>

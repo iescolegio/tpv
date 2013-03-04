@@ -6,8 +6,13 @@ package formularios;
 
 import entidades.Articulos;
 import entidades.Familias;
+import entidades.Tickets;
 import java.awt.Component;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -63,9 +68,12 @@ public class tpvTactil extends javax.swing.JFrame {
         jButton19 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        jButton13 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jButton21 = new javax.swing.JButton();
         jButton22 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         jButton23 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -283,17 +291,17 @@ public class tpvTactil extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 153));
         jPanel3.setLayout(new java.awt.GridLayout(8, 1));
 
-        jButton13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton13.setText("Salir");
-        jButton13.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton1.setText("Nuevo Ticket");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13ActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton13);
+        jPanel3.add(jButton1);
 
         jButton21.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton21.setText("Borrar");
+        jButton21.setText("Borrar Linea");
         jButton21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton21ActionPerformed(evt);
@@ -309,6 +317,28 @@ public class tpvTactil extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jButton22);
+
+        jButton13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton13.setText("Salir");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton13);
+
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton2.setText(">>");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton2);
+
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton3.setText("<<");
+        jPanel3.add(jButton3);
 
         jButton23.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton23.setText(">>");
@@ -680,6 +710,37 @@ public class tpvTactil extends javax.swing.JFrame {
         frmCodigoBarras f = new frmCodigoBarras(this,this.jTable1);
         f.setVisible(true);
     }//GEN-LAST:event_jButton22ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+//      entidades.Contadores Contador=  ObtenerContador("Familias");
+//  
+//          if (Contador.getValor()==0){
+//              InsertarContador("Familias",1);
+//          }
+//          else{ 
+//              ActualizarContador(Contador.getIdcontadores(),"Familias",Contador.getValor()+1);
+//          } 
+        String fecha="12/10/2014";
+        String Numero="3";
+        SimpleDateFormat formatoDeFecha = new SimpleDateFormat("dd/MM/yyyy");
+       
+         BaseDatos.Operacion Operaciones= new BaseDatos.Operacion(); 
+       // try {
+        //   String Numero=Operaciones.InsertarTickets(formatoDeFecha.parse(fecha), 0, 0);
+           
+          //Tickets tickets= Operaciones.ObtenerIdTicketPorNumero(Numero);
+          Operaciones.InsertarLineaTickets(Numero,"sdfasdf",1,2,2,1,2);
+           
+//        } catch (ParseException ex) {
+//            Logger.getLogger(tpvTactil.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
  
  int CargarArticulos(int PosInicial,String IdFamilia){
     int IndiceBotones=0;
@@ -790,6 +851,7 @@ public class tpvTactil extends javax.swing.JFrame {
     private javax.swing.JButton cmdFamilia4;
     private javax.swing.JButton cmdFamilia5;
     private javax.swing.JButton cmdFamilia6;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
@@ -800,6 +862,7 @@ public class tpvTactil extends javax.swing.JFrame {
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton22;
@@ -810,6 +873,7 @@ public class tpvTactil extends javax.swing.JFrame {
     private javax.swing.JButton jButton27;
     private javax.swing.JButton jButton28;
     private javax.swing.JButton jButton29;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton30;
     private javax.swing.JButton jButton31;
     private javax.swing.JButton jButton32;

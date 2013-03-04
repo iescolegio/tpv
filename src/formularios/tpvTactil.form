@@ -203,7 +203,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="jButton7oohjo"/>
             <Property name="name" type="java.lang.String" value="articulos1" noResource="true"/>
           </Properties>
           <Events>
@@ -215,7 +214,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="jButton11"/>
             <Property name="name" type="java.lang.String" value="articulos2" noResource="true"/>
           </Properties>
           <Events>
@@ -227,7 +225,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="jButton14"/>
             <Property name="name" type="java.lang.String" value="articulos3" noResource="true"/>
           </Properties>
           <Events>
@@ -239,7 +236,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="jButton9"/>
             <Property name="name" type="java.lang.String" value="articulos4" noResource="true"/>
           </Properties>
           <Events>
@@ -251,7 +247,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="jButton10"/>
             <Property name="name" type="java.lang.String" value="articulos5" noResource="true"/>
           </Properties>
           <Events>
@@ -263,7 +258,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="jButton15"/>
             <Property name="name" type="java.lang.String" value="articulos6" noResource="true"/>
           </Properties>
           <Events>
@@ -275,7 +269,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="jButton17"/>
             <Property name="name" type="java.lang.String" value="articulos7" noResource="true"/>
           </Properties>
           <Events>
@@ -287,7 +280,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="jButton12"/>
             <Property name="name" type="java.lang.String" value="articulos8" noResource="true"/>
           </Properties>
           <Events>
@@ -299,7 +291,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="jButton20"/>
             <Property name="name" type="java.lang.String" value="articulos9" noResource="true"/>
           </Properties>
           <Events>
@@ -311,7 +302,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="jButton16"/>
             <Property name="name" type="java.lang.String" value="articulos10" noResource="true"/>
           </Properties>
           <Events>
@@ -323,7 +313,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="jButton18"/>
             <Property name="name" type="java.lang.String" value="articulos11" noResource="true"/>
           </Properties>
           <Events>
@@ -335,7 +324,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="jButton19"/>
             <Property name="name" type="java.lang.String" value="articulos12" noResource="true"/>
           </Properties>
           <Events>

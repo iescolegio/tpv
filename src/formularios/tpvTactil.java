@@ -166,7 +166,6 @@ public class tpvTactil extends javax.swing.JFrame {
         jPanel2.setLayout(new java.awt.GridLayout(3, 6, 2, 2));
 
         jButton7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton7.setText("jButton7oohjo");
         jButton7.setName("articulos1"); // NOI18N
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -176,7 +175,6 @@ public class tpvTactil extends javax.swing.JFrame {
         jPanel2.add(jButton7);
 
         jButton11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton11.setText("jButton11");
         jButton11.setName("articulos2"); // NOI18N
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -186,7 +184,6 @@ public class tpvTactil extends javax.swing.JFrame {
         jPanel2.add(jButton11);
 
         jButton14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton14.setText("jButton14");
         jButton14.setName("articulos3"); // NOI18N
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -196,7 +193,6 @@ public class tpvTactil extends javax.swing.JFrame {
         jPanel2.add(jButton14);
 
         jButton9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton9.setText("jButton9");
         jButton9.setName("articulos4"); // NOI18N
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -206,7 +202,6 @@ public class tpvTactil extends javax.swing.JFrame {
         jPanel2.add(jButton9);
 
         jButton10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton10.setText("jButton10");
         jButton10.setName("articulos5"); // NOI18N
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -216,7 +211,6 @@ public class tpvTactil extends javax.swing.JFrame {
         jPanel2.add(jButton10);
 
         jButton15.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton15.setText("jButton15");
         jButton15.setName("articulos6"); // NOI18N
         jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -226,7 +220,6 @@ public class tpvTactil extends javax.swing.JFrame {
         jPanel2.add(jButton15);
 
         jButton17.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton17.setText("jButton17");
         jButton17.setName("articulos7"); // NOI18N
         jButton17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -236,7 +229,6 @@ public class tpvTactil extends javax.swing.JFrame {
         jPanel2.add(jButton17);
 
         jButton12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton12.setText("jButton12");
         jButton12.setName("articulos8"); // NOI18N
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -246,7 +238,6 @@ public class tpvTactil extends javax.swing.JFrame {
         jPanel2.add(jButton12);
 
         jButton20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton20.setText("jButton20");
         jButton20.setName("articulos9"); // NOI18N
         jButton20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -256,7 +247,6 @@ public class tpvTactil extends javax.swing.JFrame {
         jPanel2.add(jButton20);
 
         jButton16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton16.setText("jButton16");
         jButton16.setName("articulos10"); // NOI18N
         jButton16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -266,7 +256,6 @@ public class tpvTactil extends javax.swing.JFrame {
         jPanel2.add(jButton16);
 
         jButton18.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton18.setText("jButton18");
         jButton18.setName("articulos11"); // NOI18N
         jButton18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -276,7 +265,6 @@ public class tpvTactil extends javax.swing.JFrame {
         jPanel2.add(jButton18);
 
         jButton19.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton19.setText("jButton19");
         jButton19.setName("articulos12"); // NOI18N
         jButton19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

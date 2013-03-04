@@ -59,24 +59,24 @@ public class tpvTactil extends javax.swing.JFrame {
         cmdFamilia5 = new javax.swing.JButton();
         cmdFamilia6 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jButton7 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton20 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
+        cmdArticulo01 = new javax.swing.JButton();
+        cmdArticulo02 = new javax.swing.JButton();
+        cmdArticulo03 = new javax.swing.JButton();
+        cmdArticulo04 = new javax.swing.JButton();
+        cmdArticulo05 = new javax.swing.JButton();
+        cmdArticulo06 = new javax.swing.JButton();
+        cmdArticulo07 = new javax.swing.JButton();
+        cmdArticulo08 = new javax.swing.JButton();
+        cmdArticulo09 = new javax.swing.JButton();
+        cmdArticulo10 = new javax.swing.JButton();
+        cmdArticulo11 = new javax.swing.JButton();
+        cmdArticulo12 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton21 = new javax.swing.JButton();
-        jButton22 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
+        cmdNuevo = new javax.swing.JButton();
+        cmdBorrarLinea = new javax.swing.JButton();
+        cmdCodigoBarras = new javax.swing.JButton();
+        cmdSalir = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton23 = new javax.swing.JButton();
@@ -165,113 +165,113 @@ public class tpvTactil extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 204, 204));
         jPanel2.setLayout(new java.awt.GridLayout(3, 6, 2, 2));
 
-        jButton7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton7.setName("articulos1"); // NOI18N
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        cmdArticulo01.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cmdArticulo01.setName("articulos1"); // NOI18N
+        cmdArticulo01.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                cmdArticulo01ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton7);
+        jPanel2.add(cmdArticulo01);
 
-        jButton11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton11.setName("articulos2"); // NOI18N
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
+        cmdArticulo02.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cmdArticulo02.setName("articulos2"); // NOI18N
+        cmdArticulo02.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+                cmdArticulo02ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton11);
+        jPanel2.add(cmdArticulo02);
 
-        jButton14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton14.setName("articulos3"); // NOI18N
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
+        cmdArticulo03.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cmdArticulo03.setName("articulos3"); // NOI18N
+        cmdArticulo03.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
+                cmdArticulo03ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton14);
+        jPanel2.add(cmdArticulo03);
 
-        jButton9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton9.setName("articulos4"); // NOI18N
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        cmdArticulo04.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cmdArticulo04.setName("articulos4"); // NOI18N
+        cmdArticulo04.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                cmdArticulo04ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton9);
+        jPanel2.add(cmdArticulo04);
 
-        jButton10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton10.setName("articulos5"); // NOI18N
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        cmdArticulo05.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cmdArticulo05.setName("articulos5"); // NOI18N
+        cmdArticulo05.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                cmdArticulo05ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton10);
+        jPanel2.add(cmdArticulo05);
 
-        jButton15.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton15.setName("articulos6"); // NOI18N
-        jButton15.addActionListener(new java.awt.event.ActionListener() {
+        cmdArticulo06.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cmdArticulo06.setName("articulos6"); // NOI18N
+        cmdArticulo06.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton15ActionPerformed(evt);
+                cmdArticulo06ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton15);
+        jPanel2.add(cmdArticulo06);
 
-        jButton17.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton17.setName("articulos7"); // NOI18N
-        jButton17.addActionListener(new java.awt.event.ActionListener() {
+        cmdArticulo07.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cmdArticulo07.setName("articulos7"); // NOI18N
+        cmdArticulo07.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton17ActionPerformed(evt);
+                cmdArticulo07ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton17);
+        jPanel2.add(cmdArticulo07);
 
-        jButton12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton12.setName("articulos8"); // NOI18N
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
+        cmdArticulo08.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cmdArticulo08.setName("articulos8"); // NOI18N
+        cmdArticulo08.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
+                cmdArticulo08ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton12);
+        jPanel2.add(cmdArticulo08);
 
-        jButton20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton20.setName("articulos9"); // NOI18N
-        jButton20.addActionListener(new java.awt.event.ActionListener() {
+        cmdArticulo09.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cmdArticulo09.setName("articulos9"); // NOI18N
+        cmdArticulo09.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton20ActionPerformed(evt);
+                cmdArticulo09ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton20);
+        jPanel2.add(cmdArticulo09);
 
-        jButton16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton16.setName("articulos10"); // NOI18N
-        jButton16.addActionListener(new java.awt.event.ActionListener() {
+        cmdArticulo10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cmdArticulo10.setName("articulos10"); // NOI18N
+        cmdArticulo10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton16ActionPerformed(evt);
+                cmdArticulo10ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton16);
+        jPanel2.add(cmdArticulo10);
 
-        jButton18.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton18.setName("articulos11"); // NOI18N
-        jButton18.addActionListener(new java.awt.event.ActionListener() {
+        cmdArticulo11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cmdArticulo11.setName("articulos11"); // NOI18N
+        cmdArticulo11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton18ActionPerformed(evt);
+                cmdArticulo11ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton18);
+        jPanel2.add(cmdArticulo11);
 
-        jButton19.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton19.setName("articulos12"); // NOI18N
-        jButton19.addActionListener(new java.awt.event.ActionListener() {
+        cmdArticulo12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cmdArticulo12.setName("articulos12"); // NOI18N
+        cmdArticulo12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton19ActionPerformed(evt);
+                cmdArticulo12ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton19);
+        jPanel2.add(cmdArticulo12);
 
         jButton8.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton8.setText(">>");
@@ -284,41 +284,41 @@ public class tpvTactil extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 153));
         jPanel3.setLayout(new java.awt.GridLayout(8, 1));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton1.setText("Nuevo Ticket");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        cmdNuevo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cmdNuevo.setText("Nuevo Ticket");
+        cmdNuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                cmdNuevoActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton1);
+        jPanel3.add(cmdNuevo);
 
-        jButton21.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton21.setText("Borrar Linea");
-        jButton21.addActionListener(new java.awt.event.ActionListener() {
+        cmdBorrarLinea.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cmdBorrarLinea.setText("Borrar Linea");
+        cmdBorrarLinea.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton21ActionPerformed(evt);
+                cmdBorrarLineaActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton21);
+        jPanel3.add(cmdBorrarLinea);
 
-        jButton22.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton22.setText("Codigo de Barras");
-        jButton22.addActionListener(new java.awt.event.ActionListener() {
+        cmdCodigoBarras.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cmdCodigoBarras.setText("Codigo de Barras");
+        cmdCodigoBarras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton22ActionPerformed(evt);
+                cmdCodigoBarrasActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton22);
+        jPanel3.add(cmdCodigoBarras);
 
-        jButton13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton13.setText("Salir");
-        jButton13.addActionListener(new java.awt.event.ActionListener() {
+        cmdSalir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cmdSalir.setText("Salir");
+        cmdSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13ActionPerformed(evt);
+                cmdSalirActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton13);
+        jPanel3.add(cmdSalir);
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton2.setText(">>");
@@ -507,10 +507,10 @@ public class tpvTactil extends javax.swing.JFrame {
        Ultima= CargarFamilias(Ultima);
     }//GEN-LAST:event_jButton8ActionPerformed
 
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+    private void cmdSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdSalirActionPerformed
         // TODO add your handling code here:
         this.dispose();
-    }//GEN-LAST:event_jButton13ActionPerformed
+    }//GEN-LAST:event_cmdSalirActionPerformed
 
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
         // TODO add your handling code here:
@@ -580,13 +580,13 @@ public class tpvTactil extends javax.swing.JFrame {
     }//GEN-LAST:event_cmdFamilia6ActionPerformed
 
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void cmdArticulo01ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdArticulo01ActionPerformed
         // TODO add your handling code here:
         
         ManejadorFechas FechaActual=new ManejadorFechas();
         DefaultTableModel temp = (DefaultTableModel) jTable1.getModel();
-        Articulos A=ObtenerPrecioArticuloPorCodigo(jButton7.getText());
-        Object nuevo[]= {txtDisplay.getText(),jButton7.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
+        Articulos A=ObtenerPrecioArticuloPorCodigo(cmdArticulo01.getText());
+        Object nuevo[]= {txtDisplay.getText(),cmdArticulo01.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
         temp.addRow(nuevo);
               
        
@@ -603,104 +603,104 @@ public class tpvTactil extends javax.swing.JFrame {
         
         int Cantidad= Integer.parseInt((txtDisplay.getText().toString()));
               
-        Operaciones.InsertarLineaTickets(NumeroTicket,jButton7.getText(),
+        Operaciones.InsertarLineaTickets(NumeroTicket,cmdArticulo01.getText(),
                    Cantidad,A.getPrecio(),A.getPrecio()*Cantidad,0,0,0);
           
          
         
         
     
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_cmdArticulo01ActionPerformed
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+    private void cmdArticulo02ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdArticulo02ActionPerformed
         // TODO add your handling code here:
         DefaultTableModel temp = (DefaultTableModel) jTable1.getModel();
-        Articulos A=ObtenerPrecioArticuloPorCodigo(jButton11.getText());
-        Object nuevo[]= {txtDisplay.getText(),jButton11.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
+        Articulos A=ObtenerPrecioArticuloPorCodigo(cmdArticulo02.getText());
+        Object nuevo[]= {txtDisplay.getText(),cmdArticulo02.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
         temp.addRow(nuevo);
-    }//GEN-LAST:event_jButton11ActionPerformed
+    }//GEN-LAST:event_cmdArticulo02ActionPerformed
 
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+    private void cmdArticulo03ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdArticulo03ActionPerformed
         // TODO add your handling code here:
         DefaultTableModel temp = (DefaultTableModel) jTable1.getModel();
-        Articulos A=ObtenerPrecioArticuloPorCodigo(jButton14.getText());
-        Object nuevo[]= {txtDisplay.getText(),jButton14.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
+        Articulos A=ObtenerPrecioArticuloPorCodigo(cmdArticulo03.getText());
+        Object nuevo[]= {txtDisplay.getText(),cmdArticulo03.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
         temp.addRow(nuevo);
-    }//GEN-LAST:event_jButton14ActionPerformed
+    }//GEN-LAST:event_cmdArticulo03ActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    private void cmdArticulo04ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdArticulo04ActionPerformed
         // TODO add your handling code here:
         DefaultTableModel temp = (DefaultTableModel) jTable1.getModel();
-        Articulos A=ObtenerPrecioArticuloPorCodigo(jButton9.getText());
-        Object nuevo[]= {txtDisplay.getText(),jButton9.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
+        Articulos A=ObtenerPrecioArticuloPorCodigo(cmdArticulo04.getText());
+        Object nuevo[]= {txtDisplay.getText(),cmdArticulo04.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
         temp.addRow(nuevo);
-    }//GEN-LAST:event_jButton9ActionPerformed
+    }//GEN-LAST:event_cmdArticulo04ActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+    private void cmdArticulo05ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdArticulo05ActionPerformed
         // TODO add your handling code here:
         DefaultTableModel temp = (DefaultTableModel) jTable1.getModel();
-        Articulos A=ObtenerPrecioArticuloPorCodigo(jButton10.getText());
-        Object nuevo[]= {txtDisplay.getText(),jButton10.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
+        Articulos A=ObtenerPrecioArticuloPorCodigo(cmdArticulo05.getText());
+        Object nuevo[]= {txtDisplay.getText(),cmdArticulo05.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
         temp.addRow(nuevo);
-    }//GEN-LAST:event_jButton10ActionPerformed
+    }//GEN-LAST:event_cmdArticulo05ActionPerformed
 
-    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+    private void cmdArticulo06ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdArticulo06ActionPerformed
         // TODO add your handling code here:
         DefaultTableModel temp = (DefaultTableModel) jTable1.getModel();
-        Articulos A=ObtenerPrecioArticuloPorCodigo(jButton15.getText());
-        Object nuevo[]= {txtDisplay.getText(),jButton15.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
+        Articulos A=ObtenerPrecioArticuloPorCodigo(cmdArticulo06.getText());
+        Object nuevo[]= {txtDisplay.getText(),cmdArticulo06.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
         temp.addRow(nuevo);
-    }//GEN-LAST:event_jButton15ActionPerformed
+    }//GEN-LAST:event_cmdArticulo06ActionPerformed
 
-    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+    private void cmdArticulo07ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdArticulo07ActionPerformed
         // TODO add your handling code here:
         DefaultTableModel temp = (DefaultTableModel) jTable1.getModel();
-        Articulos A=ObtenerPrecioArticuloPorCodigo(jButton17.getText());
-        Object nuevo[]= {txtDisplay.getText(),jButton17.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
+        Articulos A=ObtenerPrecioArticuloPorCodigo(cmdArticulo07.getText());
+        Object nuevo[]= {txtDisplay.getText(),cmdArticulo07.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
         temp.addRow(nuevo);
-    }//GEN-LAST:event_jButton17ActionPerformed
+    }//GEN-LAST:event_cmdArticulo07ActionPerformed
 
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+    private void cmdArticulo08ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdArticulo08ActionPerformed
         // TODO add your handling code here:
         DefaultTableModel temp = (DefaultTableModel) jTable1.getModel();
-        Articulos A=ObtenerPrecioArticuloPorCodigo(jButton12.getText());
-        Object nuevo[]= {txtDisplay.getText(),jButton12.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
+        Articulos A=ObtenerPrecioArticuloPorCodigo(cmdArticulo08.getText());
+        Object nuevo[]= {txtDisplay.getText(),cmdArticulo08.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
         temp.addRow(nuevo);
-    }//GEN-LAST:event_jButton12ActionPerformed
+    }//GEN-LAST:event_cmdArticulo08ActionPerformed
 
-    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+    private void cmdArticulo09ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdArticulo09ActionPerformed
         // TODO add your handling code here:
         DefaultTableModel temp = (DefaultTableModel) jTable1.getModel();
-        Articulos A=ObtenerPrecioArticuloPorCodigo(jButton20.getText());
-        Object nuevo[]= {txtDisplay.getText(),jButton20.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
+        Articulos A=ObtenerPrecioArticuloPorCodigo(cmdArticulo09.getText());
+        Object nuevo[]= {txtDisplay.getText(),cmdArticulo09.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
         temp.addRow(nuevo);
-    }//GEN-LAST:event_jButton20ActionPerformed
+    }//GEN-LAST:event_cmdArticulo09ActionPerformed
 
-    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+    private void cmdArticulo10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdArticulo10ActionPerformed
         // TODO add your handling code here:
         DefaultTableModel temp = (DefaultTableModel) jTable1.getModel();
-        Articulos A=ObtenerPrecioArticuloPorCodigo(jButton16.getText());
-        Object nuevo[]= {txtDisplay.getText(),jButton16.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
+        Articulos A=ObtenerPrecioArticuloPorCodigo(cmdArticulo10.getText());
+        Object nuevo[]= {txtDisplay.getText(),cmdArticulo10.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
         temp.addRow(nuevo);
-    }//GEN-LAST:event_jButton16ActionPerformed
+    }//GEN-LAST:event_cmdArticulo10ActionPerformed
 
-    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+    private void cmdArticulo11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdArticulo11ActionPerformed
         // TODO add your handling code here:
         DefaultTableModel temp = (DefaultTableModel) jTable1.getModel();
-        Articulos A=ObtenerPrecioArticuloPorCodigo(jButton18.getText());
-        Object nuevo[]= {txtDisplay.getText(),jButton18.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
+        Articulos A=ObtenerPrecioArticuloPorCodigo(cmdArticulo11.getText());
+        Object nuevo[]= {txtDisplay.getText(),cmdArticulo11.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
         temp.addRow(nuevo);
-    }//GEN-LAST:event_jButton18ActionPerformed
+    }//GEN-LAST:event_cmdArticulo11ActionPerformed
 
-    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+    private void cmdArticulo12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdArticulo12ActionPerformed
         // TODO add your handling code here:
         DefaultTableModel temp = (DefaultTableModel) jTable1.getModel();
-        Articulos A=ObtenerPrecioArticuloPorCodigo(jButton19.getText());
-        Object nuevo[]= {txtDisplay.getText(),jButton19.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
+        Articulos A=ObtenerPrecioArticuloPorCodigo(cmdArticulo12.getText());
+        Object nuevo[]= {txtDisplay.getText(),cmdArticulo12.getText() ,A.getPrecio()}; //esto es por las tres columnas aunque puede variar
         temp.addRow(nuevo);
-    }//GEN-LAST:event_jButton19ActionPerformed
+    }//GEN-LAST:event_cmdArticulo12ActionPerformed
 
-    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+    private void cmdBorrarLineaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdBorrarLineaActionPerformed
         // TODO add your handling code here:
         int filaSele;
         try{
@@ -722,17 +722,17 @@ public class tpvTactil extends javax.swing.JFrame {
         
         
         
-    }//GEN-LAST:event_jButton21ActionPerformed
+    }//GEN-LAST:event_cmdBorrarLineaActionPerformed
 
-    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+    private void cmdCodigoBarrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdCodigoBarrasActionPerformed
         // TODO add your handling code here:
         this.setEnabled(false);
         
         frmCodigoBarras f = new frmCodigoBarras(this,this.jTable1);
         f.setVisible(true);
-    }//GEN-LAST:event_jButton22ActionPerformed
+    }//GEN-LAST:event_cmdCodigoBarrasActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void cmdNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdNuevoActionPerformed
         // TODO add your handling code here:
         
         NumeroTicket="";
@@ -751,7 +751,7 @@ public class tpvTactil extends javax.swing.JFrame {
 //            Logger.getLogger(tpvTactil.class.getName()).log(Level.SEVERE, null, ex);
 //        }
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_cmdNuevoActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
@@ -862,27 +862,29 @@ public class tpvTactil extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton cmdArticulo01;
+    private javax.swing.JButton cmdArticulo02;
+    private javax.swing.JButton cmdArticulo03;
+    private javax.swing.JButton cmdArticulo04;
+    private javax.swing.JButton cmdArticulo05;
+    private javax.swing.JButton cmdArticulo06;
+    private javax.swing.JButton cmdArticulo07;
+    private javax.swing.JButton cmdArticulo08;
+    private javax.swing.JButton cmdArticulo09;
+    private javax.swing.JButton cmdArticulo10;
+    private javax.swing.JButton cmdArticulo11;
+    private javax.swing.JButton cmdArticulo12;
+    private javax.swing.JButton cmdBorrarLinea;
+    private javax.swing.JButton cmdCodigoBarras;
     private javax.swing.JButton cmdFamilia1;
     private javax.swing.JButton cmdFamilia2;
     private javax.swing.JButton cmdFamilia3;
     private javax.swing.JButton cmdFamilia4;
     private javax.swing.JButton cmdFamilia5;
     private javax.swing.JButton cmdFamilia6;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
+    private javax.swing.JButton cmdNuevo;
+    private javax.swing.JButton cmdSalir;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton20;
-    private javax.swing.JButton jButton21;
-    private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton24;
     private javax.swing.JButton jButton25;
@@ -897,9 +899,7 @@ public class tpvTactil extends javax.swing.JFrame {
     private javax.swing.JButton jButton33;
     private javax.swing.JButton jButton34;
     private javax.swing.JButton jButton35;
-    private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
